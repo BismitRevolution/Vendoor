@@ -1,12 +1,11 @@
 .form-control {
-    border-bottom: solid blue 2px;
+    border-bottom: solid var(--color-blue) 2px !important;
     border-radius: 0;
     text-align: right;
-    color: blue;
 }
 
 #nav {
-    color: blue;
+    position: sticky;
 }
 
 #nav > div {
@@ -15,7 +14,7 @@
 
 #nav-brand a {
     font-size: 3em;
-    font-family: "Roboto Medium";
+    font-family: "LuloCleanOne-Bold";
     font-weight: bold;
 }
 

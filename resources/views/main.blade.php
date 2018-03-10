@@ -36,7 +36,7 @@
     </head>
     <body>
         @include('layouts._header')
-        <div class="">
+        <div id="content" class="">
         @yield('content')
         </div>
 

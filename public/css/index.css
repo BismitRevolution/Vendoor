@@ -1,0 +1,24 @@
+.mid_container {
+  width: 720px;
+  margin: 0 auto;
+}
+
+.box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 220px;
+  height: 220px;
+  margin: auto;
+  padding: auto 0;
+}
+
+.box-menu {
+  display: block;
+  align-content: center;
+  align-items: center;
+
+  width: inherit;
+  margin: 0 auto;
+}

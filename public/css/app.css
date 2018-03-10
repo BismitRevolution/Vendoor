@@ -1,77 +1,84 @@
 :root {
-    --color-light: #00B1FF; /*rgba(0, 177, 255, 1)*/
-    --color-semi-light: #009EE3; /*rgba(0, 158, 227, 1)*/
-    --color-default: #007FC8; /*rgba(0, 127, 200, 1)*/
-    --color-semi-dark: #3164AD; /*rgba(49, 100, 173, 1)*/
-    --color-dark: #28518C; /*rgba(40, 81, 140, 1)*/
+    --color-blue: #2760BE; /*rgba(0, 177, 255, 1)*/
+    --color-blue-semi-light: #3A82CB; /*rgba(0, 158, 227, 1)*/
+    --color-blue-light: #64A3D9; /*rgba(0, 127, 200, 1)*/
 }
 
 @font-face {
-    font-family: "Roboto Medium";
-    src: url('/fonts/Roboto-Medium.ttf');
+    font-family: "HKGrotesk-Bold";
+    src: url('/fonts/HKGrotesk-Bold.ttf');
 }
 
 @font-face {
-    font-family: "Roboto Regular";
-    src: url('/fonts/Roboto-Regular.ttf');
+    font-family: "HKGrotesk-Light";
+    src: url('/fonts/HKGrotesk-Light.ttf');
 }
 
 @font-face {
-    font-family: "Open Sans";
-    src: url('/fonts/OpenSans-Regular.ttf');
+    font-family: "HKGrotesk-Italic";
+    src: url('/fonts/HKGrotesk-Italic.ttf');
 }
 
 @font-face {
-    font-family: "DIN 1451";
-    src: url('/fonts/din1451alt G.ttf');
+    font-family: "HKGrotesk-Medium";
+    src: url('/fonts/HKGrotesk-Medium.ttf');
+}
+
+@font-face {
+    font-family: "HKGrotesk-Regular";
+    src: url('/fonts/HKGrotesk-Regular.ttf');
+}
+
+@font-face {
+    font-family: "LuloCleanOne";
+    src: url('/fonts/LuloCleanOne.otf');
+}
+
+@font-face {
+    font-family: "LuloCleanOne-Bold";
+    src: url('/fonts/LuloCleanOneBold.otf');
+}
+
+@font-face {
+    font-family: "LuloCleanOne-Outline";
+    src: url('/fonts/LuloCleanOneOutline.ttf');
+}
+
+@font-face {
+    font-family: "LuloCleanTwo-Bold";
+    src: url('/fonts/LuloCleanTwoBold.ttf');
 }
 
 .bg-white {
     background: white !important;
 }
 
-.bg-light {
-    background: var(--color-light) !important;
+.bg-blue-semi-light {
+    background-color: var(--color-blue-semi-light) !important;
 }
 
-.bg-semi-light {
-    background: var(--color-semi-light) !important;
+.bg-blue-light {
+    background-color: var(--color-blue-light) !important;
 }
 
-.bg-default {
-    background: var(--color-default) !important;
-}
-
-.bg-semi-dark {
-    background: var(--color-semi-dark) !important;
-}
-
-.bg-dark {
-    background: var(--color-dark) !important;
+.bg-blue {
+    background-color: var(--color-blue) !important;
 }
 
 .white {
     color: white !important;
 }
 
-.light {
-    color: var(--color-light) !important;
+.blue-semi-light {
+    color: var(--color-blue-semi-light) !important;
 }
 
-.semi-light {
-    color: var(--color-semi-light) !important;
+.blue-light {
+    color: var(--color-blue-light) !important;
 }
 
-.default {
-    color: var(--color-default) !important;
-}
-
-.semi-dark {
-    color: var(--color-semi-dark) !important;
-}
-
-.dark {
-    color: var(--color-dark) !important;
+.blue {
+    color: var(--color-blue) !important;
 }
 
 .row {
@@ -102,21 +109,21 @@
 }
 
 .shadow-top {
-	box-shadow: 0 -5px 5px -5px #333;
+    box-shadow: 0 -5px 5px -5px #333;
 }
 
 .shadow-right {
-	box-shadow: 5px 0 5px -5px #333;
+    box-shadow: 5px 0 5px -5px #333;
 }
 
 .shadow-bottom {
-	box-shadow: 0 5px 5px -5px #333;
+    box-shadow: 0 5px 5px -5px #333;
 }
 
 .shadow-left {
-	box-shadow: -5px 0 5px -5px #333;
+    box-shadow: -5px 0 5px -5px #333;
 }
 
 .shadow-all {
-	box-shadow: 0 0 5px #333;
+    box-shadow: 0 0 5px #333;
 }

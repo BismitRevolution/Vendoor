@@ -1,8 +1,8 @@
-<div id="nav" class="container-fluid d-flex flex-row align-items-center">
-    <div id="nav-brand" class="col-sm-auto">
-        <a href="#">VENDOOR</a>
+<div id="nav" class="container-fluid d-flex flex-row align-items-center blue bg-white">
+    <div id="nav-brand" class="col-sm-auto blue">
+        <a href="#" class="blue">VENDOOR</a>
     </div>
-    <div id="nav-search" class="col">
+    <div id="nav-search" class="col blue">
         <div class="">
             <form role="form">
                 <label class="form-group has-float-label">
