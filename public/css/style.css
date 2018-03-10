@@ -1,0 +1,27 @@
+.fullpage {
+    margin: 0px;
+    padding-top: 25px;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+.full-height {
+    min-height: 90vh;
+}
+
+.width-80 {
+    width: 80%;
+}
+
+.post {
+    margin-bottom: 35px;
+}
+
+.post div {
+    padding: 15px;
+}
+
+.post .trailer {
+    max-height: 200px;
+}
