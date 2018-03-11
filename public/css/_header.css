@@ -19,6 +19,10 @@
     font-weight: bold;
 }
 
+#nav-brand a:hover {
+    text-decoration: none;
+}
+
 #nav-search > div {
     margin-top: 15px;
 }

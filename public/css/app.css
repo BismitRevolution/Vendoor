@@ -127,3 +127,7 @@
 .shadow-all {
     box-shadow: 0 0 5px #333;
 }
+
+.hidden {
+    display: none;
+}
