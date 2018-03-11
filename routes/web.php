@@ -26,6 +26,8 @@ Route::resource('/template', 'TemplateController');
 
 Route::resource('/posts', 'PostController');
 
+Route::resource('/vendors', 'VendorController');
+
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
   Route::get('/login', 'AdminAuth\LoginController@showLoginForm')->name('login');

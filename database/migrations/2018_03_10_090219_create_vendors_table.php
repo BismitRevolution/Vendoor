@@ -18,7 +18,7 @@ class CreateVendorsTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->text('address');
-            $table->integer('view_count')->unsigned();
+            $table->integer('view_count')->unsigned()->default(0);
             $table->foreign('location_id')->reference('location_id')->on('locations');
             $table->foreign('category_id')->reference('category_id')->on('categories');
         });
