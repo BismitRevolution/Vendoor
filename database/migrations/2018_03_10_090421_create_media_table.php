@@ -16,8 +16,9 @@ class CreateMediaTable extends Migration
         Schema::create('media', function (Blueprint $table) {
             $table->increments('media_id')->unsigned();
             $table->string('path');
-            $table->foreign('tagged_to')->reference('vendor_id')->on('vendors');
+            $table->integer('tagged_to')->unsigned();
             $table->timestamps();
+            $table->foreign('tagged_to')->references('vendor_id')->on('vendors');
         });
     }
 
