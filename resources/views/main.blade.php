@@ -27,6 +27,8 @@
         <link rel="stylesheet" href="{{ asset('css/_footer.css') }}">
         <!-- Default Style -->
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <!-- Float Search Bar -->
+        <link rel="stylesheet" href="{{ asset('css/vendor/bootstrap-float-label.min.css') }}">
         @yield('extra-css')
 
         <!-- Google Open Sans -->
@@ -36,7 +38,7 @@
     </head>
     <body>
         @include('layouts._header')
-        <div class="">
+        <div id="content" class="">
         @yield('content')
         </div>
 

@@ -1,0 +1,129 @@
+:root {
+    --color-blue: #2760BE; /*rgba(0, 177, 255, 1)*/
+    --color-blue-semi-light: #3A82CB; /*rgba(0, 158, 227, 1)*/
+    --color-blue-light: #64A3D9; /*rgba(0, 127, 200, 1)*/
+}
+
+@font-face {
+    font-family: "HKGrotesk-Bold";
+    src: url('/fonts/HKGrotesk-Bold.ttf');
+}
+
+@font-face {
+    font-family: "HKGrotesk-Light";
+    src: url('/fonts/HKGrotesk-Light.ttf');
+}
+
+@font-face {
+    font-family: "HKGrotesk-Italic";
+    src: url('/fonts/HKGrotesk-Italic.ttf');
+}
+
+@font-face {
+    font-family: "HKGrotesk-Medium";
+    src: url('/fonts/HKGrotesk-Medium.ttf');
+}
+
+@font-face {
+    font-family: "HKGrotesk-Regular";
+    src: url('/fonts/HKGrotesk-Regular.ttf');
+}
+
+@font-face {
+    font-family: "LuloCleanOne";
+    src: url('/fonts/LuloCleanOne.otf');
+}
+
+@font-face {
+    font-family: "LuloCleanOne-Bold";
+    src: url('/fonts/LuloCleanOneBold.otf');
+}
+
+@font-face {
+    font-family: "LuloCleanOne-Outline";
+    src: url('/fonts/LuloCleanOneOutline.ttf');
+}
+
+@font-face {
+    font-family: "LuloCleanTwo-Bold";
+    src: url('/fonts/LuloCleanTwoBold.ttf');
+}
+
+.bg-white {
+    background: white !important;
+}
+
+.bg-blue-semi-light {
+    background-color: var(--color-blue-semi-light) !important;
+}
+
+.bg-blue-light {
+    background-color: var(--color-blue-light) !important;
+}
+
+.bg-blue {
+    background-color: var(--color-blue) !important;
+}
+
+.white {
+    color: white !important;
+}
+
+.blue-semi-light {
+    color: var(--color-blue-semi-light) !important;
+}
+
+.blue-light {
+    color: var(--color-blue-light) !important;
+}
+
+.blue {
+    color: var(--color-blue) !important;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.border {
+    /*border: 0.5px solid var(--color-default) !important;*/
+    box-shadow: 0 0 9px #999;
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto,
+.col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto,
+.col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto,
+.col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto,
+.col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.left {
+    padding-right: 5px;
+}
+
+.right {
+    padding-left: 5px;
+}
+
+.shadow-top {
+    box-shadow: 0 -5px 5px -5px #333;
+}
+
+.shadow-right {
+    box-shadow: 5px 0 5px -5px #333;
+}
+
+.shadow-bottom {
+    box-shadow: 0 5px 5px -5px #333;
+}
+
+.shadow-left {
+    box-shadow: -5px 0 5px -5px #333;
+}
+
+.shadow-all {
+    box-shadow: 0 0 5px #333;
+}

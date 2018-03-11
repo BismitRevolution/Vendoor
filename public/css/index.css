@@ -1,0 +1,31 @@
+.container {
+    width: 720px;
+}
+
+#nav-search {
+    margin-top: 65px;
+}
+
+#content {
+    margin-top: 0px;
+}
+
+.box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#middle {
+    padding: 35px 35px 10px 35px;
+}
+
+#middle .title h1 {
+    font-family: "LuloCleanOne-Bold";
+    font-size: 4em;
+}
+
+#middle .paragraf p {
+    font-family: "HKGrotesk-Regular";
+    font-size: 1.2em;
+}

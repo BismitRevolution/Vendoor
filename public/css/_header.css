@@ -1,0 +1,29 @@
+.form-control {
+    border: none;
+    border-bottom: solid var(--color-blue) 2px !important;
+    border-radius: 0;
+    text-align: right;
+}
+
+#nav {
+    position: sticky;
+}
+
+#nav > div {
+    padding: 20px;
+}
+
+#nav-brand a {
+    font-size: 3em;
+    font-family: "LuloCleanOne-Bold";
+    font-weight: bold;
+}
+
+#nav-search > div {
+    margin-top: 15px;
+}
+
+#nav-search span {
+    left: auto;
+    right: 0;
+}
