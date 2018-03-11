@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Vendor;
+use App\Vendor;
 
 class VendorController extends Controller
 {
@@ -65,7 +65,7 @@ class VendorController extends Controller
      */
     public function show($id)
     {
-        $post = Post::find($id);
+        $vendor = Vendor::find($id);
 
         return view('vendors.show')->with('vendor', $vendor);
     }
