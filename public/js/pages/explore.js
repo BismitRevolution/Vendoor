@@ -7,4 +7,6 @@ $(document).ready(function () {
         $("#filter").removeClass("btn-group");
         $("#filter-fill").addClass("hidden");
     }
+
+    $("#filter").height($("#field").height());
 });

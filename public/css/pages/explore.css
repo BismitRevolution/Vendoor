@@ -2,10 +2,6 @@
     margin: 0 auto;
 }
 
-#content {
-    margin-top: 0px;
-}
-
 #filter button, #filter select {
     border: var(--color-blue);
 }
@@ -20,11 +16,12 @@
 }
 
 #filter select {
+    min-height: 75px;
     text-align-last: center;
     background-image:
-        linear-gradient(45deg, transparent 50%, white 60%),
-        linear-gradient(135deg, white 40%, transparent 50%) !important;
-    background-position: calc(100% - 30px) 30px, calc(100% - 20px) 30px, 100% 0;
+    linear-gradient(45deg, transparent 50%, white 60%),
+    linear-gradient(135deg, white 40%, transparent 50%) !important;
+    background-position: calc(100% - 30px) 25px, calc(100% - 20px) 25px, 100% 0;
     background-size: 10px 10px, 10px 10px;
     background-repeat: no-repeat;
     -webkit-appearance: none;
@@ -40,4 +37,35 @@
     border-radius: 0;
     max-height: 200px;
     overflow-y: scroll;
+}
+
+.post {
+    margin-left: 35px;
+}
+
+.post .trailer {
+    padding: 15px;
+}
+
+.post .title {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.post .tag {
+    padding-bottom: 15px;
+}
+
+.badge.badge-outlined {
+    background-color: transparent;
+}
+
+.badge.badge-outlined.badge-light {
+    border: 1px solid transparent;
+    border-color: var(--color-blue);
+    color: var(--color-blue);
+}
+
+.shadow-bottom {
+    box-shadow: 0 5px 5px -5px var(--color-blue);
 }

@@ -16,16 +16,20 @@
 
 .post {
     margin-bottom: 35px;
+    line-height: 1;
 }
 
-.post div {
-    padding: 15px;
+.post > div {
+    padding: 5px;
 }
 
 .post .trailer {
     max-height: 200px;
 }
 
-#content {
-    margin-top: 112px;
+.divider {
+    margin: -3px 0px 10px 0px;
+    width: 99%;
+    height: 2px;
+    background-color: var(--color-blue);
 }
