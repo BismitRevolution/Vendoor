@@ -9,40 +9,43 @@
 
 @section('content')
 <div class="container">
-  <div class="mid_container">
-
-    <div class="box-menu">
-      <div class="box bg-blue">
-        <img src="{{ asset('img/cinema.png')}}" alt="" width="100px">
-      </div>
-      <div class="box bg-blue-semi-light">
-        <img src="{{ asset('img/cinema.png')}}" alt="" width="100px">
-      </div>
-      <div class="box bg-blue-light">
-        <img src="{{ asset('img/cinema.png')}}" alt="" width="100px">
-      </div>
+    <div class="row">
+        <div class="col box bg-blue">
+            <img src="{{ asset('img/equipment.png')}}" alt="" width="100px">
+        </div>
+        <div class="col box bg-blue-semi-light">
+            <img src="{{ asset('img/catering.png')}}" alt="" width="100px">
+        </div>
+        <div class="col box bg-blue-light">
+            <img src="{{ asset('img/place.png')}}" alt="" width="100px">
+        </div>
     </div>
 
-    <div class="middle">
-      <h1>Vendoor</h1>
+    <div id="middle" class="blue">
+        <div class="title">
+            <h1 class="text-center">Vendoor</h1>
+        </div>
+        <div class="paragraf">
+            <p class="text-center">your door to the best vendors</p>
+        </div>
+
     </div>
 
-    <div class="box-menu">
-      <div class="box bg-blue">
-        <img src="{{ asset('img/cinema.png')}}" alt="" width="100px">
-      </div>
-      <div class="box bg-blue-semi-light">
-        <img src="{{ asset('img/cinema.png')}}" alt="" width="100px">
-      </div>
-      <div class="box bg-blue-light">
-        <img src="{{ asset('img/cinema.png')}}" alt="" width="100px">
-      </div>
+    <div class="row">
+        <div class="col box bg-blue-light">
+            <img src="{{ asset('img/printing.png')}}" alt="" width="100px">
+        </div>
+        <div class="col box bg-blue-semi-light">
+            <img src="{{ asset('img/merchandise.png')}}" alt="" width="100px">
+        </div>
+        <div class="col box bg-blue">
+            <img src="{{ asset('img/transportation.png')}}" alt="" width="100px">
+        </div>
     </div>
 
-  </div>
 </div>
 @endsection
 
 @section('extra-js')
-<!-- <script type="application/javascript" src="{{ asset('js/app.js') }}"></script> -->
+<script type="application/javascript" src="{{ asset('js/index.js') }}"></script>
 @endsection

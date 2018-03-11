@@ -1,24 +1,31 @@
-.mid_container {
-  width: 720px;
-  margin: 0 auto;
+.container {
+    width: 720px;
+}
+
+#nav-search {
+    margin-top: 65px;
+}
+
+#content {
+    margin-top: 0px;
 }
 
 .box {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 220px;
-  height: 220px;
-  margin: auto;
-  padding: auto 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.box-menu {
-  display: block;
-  align-content: center;
-  align-items: center;
+#middle {
+    padding: 35px 35px 10px 35px;
+}
 
-  width: inherit;
-  margin: 0 auto;
+#middle .title h1 {
+    font-family: "LuloCleanOne-Bold";
+    font-size: 4em;
+}
+
+#middle .paragraf p {
+    font-family: "HKGrotesk-Regular";
+    font-size: 1.2em;
 }

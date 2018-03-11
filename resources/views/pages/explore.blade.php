@@ -3,7 +3,7 @@
 @section('title', 'Explore Vendor')
 
 @section('extra-css')
-<link rel="stylesheet" href="{{ asset('css/vendor/bootstrap-float-label.min.css') }}">
+<!-- <link rel="stylesheet" href="{{ asset('css/vendor/bootstrap-float-label.min.css') }}"> -->
 @endsection
 
 @section('content')
