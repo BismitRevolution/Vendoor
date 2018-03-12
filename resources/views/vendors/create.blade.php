@@ -5,12 +5,12 @@
 	<div class="container">
 		<h1>Add a new Vendoor!</h1>
 		<form method="POST" action="{{  route('vendors.store') }}" class="form-group">
-
+			{{ csrf_field() }}
 			<label for="name">Vendor name</label>
 			<input id="name" name="name">
 
-			<label for="desc">Vendor description</label>
-			<input id="desc" name="desc">
+			<label for="description">Vendor description</label>
+			<input id="description" name="description">
 
 			<label for="address">Vendor address</label>
 			<input id="address" name="address">
