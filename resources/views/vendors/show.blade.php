@@ -3,15 +3,16 @@
 @section('content')
 
 	<div class="container">
-		<h1>A new Vendor created</h1>
+		<h1>A New Vendor Has Been Created</h1>
 		<h3>Vendor Spesification</h3>
 		<ul>
-			<li>{{ $vendor->name}}</li>
-			<li>{{ $vendor->description}}</li>
-			<li>{{ $vendor->adress}}</li>
-			<li>{{ $vendor->location_id}}</li>
-			<li>{{ $vendor->category_id}}</li>
-			<li>{{ $vendor->view_count}}</li>
+			<li>Vendor Name :		{{ $vendor->name }}</li>
+			<li>Vendor Description: {{ $vendor->description }}</li>
+			<li>Vendor Address : 	{{ $vendor->address }}</li>
+			<li>Vendor Location : 	{{ $vendor->location_id }}</li>
+			<li>Vendor Category : 	{{ $vendor->category_id }}</li>
+			<li>Vendor ViewCount:	{{  $vendor->view_count }}</li>
 		</ul>
 	</div>
+	
 @endsection

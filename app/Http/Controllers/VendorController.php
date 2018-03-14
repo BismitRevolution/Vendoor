@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\Vendor;
+use App\Vendor;
 
 class VendorController extends Controller
 {
@@ -52,9 +52,10 @@ class VendorController extends Controller
         $vendor->address = $request->address;
         $vendor->location_id = $request->location_id;
         $vendor->category_id = $request->category_id;
+        
         $vendor->save();
 
-        return redirect()->route('vendors.show', $vendor->id);
+        return redirect()->route('vendors.show', $vendor->vendor_id);
     }
 
     /**
@@ -65,7 +66,7 @@ class VendorController extends Controller
      */
     public function show($id)
     {
-        $post = Post::find($id);
+        $vendor = Vendor::find($id);
 
         return view('vendors.show')->with('vendor', $vendor);
     }

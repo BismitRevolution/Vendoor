@@ -17,7 +17,6 @@ class CreateMediaTable extends Migration
             $table->increments('media_id')->unsigned();
             $table->string('path');
             $table->integer('tagged_to')->unsigned();
-            $table->timestamps();
             $table->foreign('tagged_to')->references('vendor_id')->on('vendors');
         });
     }
