@@ -21,7 +21,7 @@
             <form role="form">
                 <label class="form-group has-float-label">
                     <input class="form-control" type="email" placeholder="search vendor"/>
-                    <span>search</span>
+                    <span>searchs</span>
                 </label>
             </form>
         </div>
