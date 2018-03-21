@@ -12,22 +12,22 @@ class LocationsTableSeeder extends Seeder
     public function run()
     {
         DB::table('locations')->insert([
-            'name' => 'Jakarta'
+            'location_name' => 'Jakarta'
         ]);
         DB::table('locations')->insert([
-            'name' => 'Bandung'
+            'location_name' => 'Bandung'
         ]);
         DB::table('locations')->insert([
-            'name' => 'Surabaya'
+            'location_name' => 'Surabaya'
         ]);
         DB::table('locations')->insert([
-            'name' => 'Bali'
+            'location_name' => 'Bali'
         ]);
         DB::table('locations')->insert([
-            'name' => 'Medan'
+            'location_name' => 'Medan'
         ]);
         DB::table('locations')->insert([
-            'name' => 'Semarang'
+            'location_name' => 'Semarang'
         ]);    
     }
 }
