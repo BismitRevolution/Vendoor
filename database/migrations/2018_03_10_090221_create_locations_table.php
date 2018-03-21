@@ -15,7 +15,7 @@ class CreateLocationsTable extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->increments('location_id')->unsigned();
-            $table->string('name');
+            $table->string('location_name');
         });
     }
 

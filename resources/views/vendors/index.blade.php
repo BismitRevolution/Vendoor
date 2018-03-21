@@ -3,14 +3,14 @@
 @section('content')
 
 	<div class="container">
-		<h1>A New Vendor Has Been Created</h1>
-		<h3>Vendor Spesification</h3>
-
+		
+		{{ $vendors }}
+		<h1>list of vendor</h1>
 		@foreach ($vendors as $vendor)
 			<li>Vendor name : {{ $vendor->name }}</li>
 			<li>Vendor description : {{ $vendor->description }}</li>
-			<li>Vendor category : {{ $vendor->category_id }}</li>
-			<li>Vendor location : {{ $vendor->location_id }}</li>
+			<li>Vendor category : {{ $vendor->category_name }}</li>
+			<li>Vendor location : {{ $vendor->location_name }}</li>
 			<li>Vendor address : {{ $vendor->address }}</li>
 			<hr>
 		@endforeach
