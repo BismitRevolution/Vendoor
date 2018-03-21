@@ -10,15 +10,24 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col box bg-blue">
-            <img src="{{ asset('img/equipment.png')}}" alt="" width="100px">
-        </div>
-        <div class="col box bg-blue-semi-light">
-            <img src="{{ asset('img/catering.png')}}" alt="" width="100px">
-        </div>
-        <div class="col box bg-blue-light">
-            <img src="{{ asset('img/place.png')}}" alt="" width="100px">
-        </div>
+        <a href="#" class="col box bg-blue">
+            <div class="text-center">
+                <img src="{{ asset('img/equipment.png')}}" alt="" width="100px">
+                <p class="white">equipment</p>
+            </div>
+        </a>
+        <a href="#" class="col box bg-blue-semi-light">
+            <div class="text-center">
+                <img src="{{ asset('img/catering.png')}}" alt="" width="100px">
+                <p class="white">catering</p>
+            </div>
+        </a>
+        <a href="#" class="col box bg-blue-light">
+            <div class="text-center">
+                <img src="{{ asset('img/place.png')}}" alt="" width="100px">
+                <p class="white">place</p>
+            </div>
+        </a>
     </div>
 
     <div id="middle" class="blue">
@@ -31,15 +40,24 @@
     </div>
 
     <div class="row">
-        <div class="col box bg-blue-light">
-            <img src="{{ asset('img/printing.png')}}" alt="" width="100px">
-        </div>
-        <div class="col box bg-blue-semi-light">
-            <img src="{{ asset('img/merchandise.png')}}" alt="" width="100px">
-        </div>
-        <div class="col box bg-blue">
-            <img src="{{ asset('img/transportation.png')}}" alt="" width="100px">
-        </div>
+        <a href="#" class="col box bg-blue-light">
+            <div class="text-center">
+                <img src="{{ asset('img/printing.png')}}" alt="" width="100px">
+                <p class="white">printing</p>
+            </div>
+        </a>
+        <a href="#" class="col box bg-blue-semi-light">
+            <div class="text-center">
+                <img src="{{ asset('img/merchandise.png')}}" alt="" width="100px">
+                <p class="white">merchandise</p>
+            </div>
+        </a>
+        <a href="#" class="col box bg-blue">
+            <div class="text-center">
+                <img src="{{ asset('img/transportation.png')}}" alt="" width="100px">
+                <p class="white">transportation</p>
+            </div>
+        </a>
     </div>
 
     <div class="row" style="margin-top: 45px; margin-bottom: 55px;">

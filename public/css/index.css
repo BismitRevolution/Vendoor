@@ -20,6 +20,17 @@
     opacity: 0.90;
 }
 
+.box p {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 1.4em;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 #middle {
     padding: 35px 35px 10px 35px;
 }
