@@ -81,6 +81,18 @@
     color: var(--color-blue) !important;
 }
 
+.br-blue-semi-light {
+    border: 2px solid var(--color-blue-semi-light) !important;
+}
+
+.br-blue-light {
+    border: 2px solid var(--color-blue-light) !important;
+}
+
+.br-blue {
+    border: 2px solid var(--color-blue) !important;
+}
+
 .row {
     margin-left: 0px;
     margin-right: 0px;

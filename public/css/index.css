@@ -16,6 +16,10 @@
     justify-content: center;
 }
 
+.box:hover {
+    opacity: 0.90;
+}
+
 #middle {
     padding: 35px 35px 10px 35px;
 }
@@ -28,4 +32,11 @@
 #middle .paragraf p {
     font-family: "HKGrotesk-Regular";
     font-size: 1.2em;
+}
+
+.round {
+    height: 60px;
+    width: 60px;
+    margin: 30px;
+    border-radius: 30px;
 }

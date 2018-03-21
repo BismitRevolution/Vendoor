@@ -28,7 +28,6 @@
         <div class="paragraf">
             <p class="text-center">your door to the best vendors</p>
         </div>
-
     </div>
 
     <div class="row">
@@ -40,6 +39,18 @@
         </div>
         <div class="col box bg-blue">
             <img src="{{ asset('img/transportation.png')}}" alt="" width="100px">
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 45px; margin-bottom: 55px;">
+        <div class="col box br-blue">
+            <div class="row">
+                <div class="round bg-blue col"></div>
+                <div class="round bg-blue col"></div>
+                <div class="round bg-blue col"></div>
+                <div class="round bg-blue col"></div>
+                <div class="round bg-blue col"></div>
+            </div>
         </div>
     </div>
 
