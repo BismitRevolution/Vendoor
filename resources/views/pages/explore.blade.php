@@ -30,7 +30,8 @@
     <div class="col-sm-12 col-md-8">
         <div class="flex-row">
             <div id="field" class="col-12">
-                <div class="flex-row d-flex post shadow-bottom">
+
+                <div class="vendor-item flex-row d-flex post shadow-bottom">
                     <div class="col-sm-auto trailer">
                         <div style="width: 75px; height: 75px; background-color: green;"></div>
                     </div>
@@ -42,18 +43,19 @@
                                 <a href="#" class="badge badge-light badge-outlined">table &amp; chair</a>
                                 <a href="#" class="badge badge-light badge-outlined">tent</a>
                             </div>
-                            <p class="description">Berdiri sejak 1997, telah melayani 10.000 project, beroperasi di Jabodetabek</p>
-                            <div class="divider"></div>
-                            <p class="address">Jalan raya margonda no. 525, Depok, Jawa Barat</p>
-                            <div class="divider"></div>
-                            <p class="email">mtzequipment@gmail.com</p>
-                            <p class="phone">0812xxxxxxx</p>
-                            <p class="website">www.mtzeq.com</p>
+                            <p class="flip description">Berdiri sejak 1997, telah melayani 10.000 project, beroperasi di Jabodetabek</p>
+                            <div class="flip divider"></div>
+                            <p class="flip address">Jalan raya margonda no. 525, Depok, Jawa Barat</p>
+                            <p class="unflip location">Depok</p>
+                            <div class="flip divider"></div>
+                            <p class="flip email">mtzequipment@gmail.com</p>
+                            <p class="flip phone">0812xxxxxxx</p>
+                            <p class="flip website">www.mtzeq.com</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="flex-row d-flex post shadow-bottom">
+                <div class="vendor-item flex-row d-flex post shadow-bottom">
                     <div class="col-sm-auto trailer">
                         <div style="width: 75px; height: 75px; background-color: green;"></div>
                     </div>
@@ -65,34 +67,42 @@
                                 <a href="#" class="badge badge-light badge-outlined">table &amp; chair</a>
                                 <a href="#" class="badge badge-light badge-outlined">tent</a>
                             </div>
-                            <p class="description">Berdiri sejak 1997, telah melayani 10.000 project, beroperasi di Jabodetabek</p>
-                            <div class="divider"></div>
-                            <p class="address">Jalan raya margonda no. 525, Depok, Jawa Barat</p>
-                            <div class="divider"></div>
-                            <p class="email">mtzequipment@gmail.com</p>
-                            <p class="phone">0812xxxxxxx</p>
-                            <p class="website">www.mtzeq.com</p>
+                            <p class="flip description">Berdiri sejak 1997, telah melayani 10.000 project, beroperasi di Jabodetabek</p>
+                            <div class="flip divider"></div>
+                            <p class="flip address">Jalan raya margonda no. 525, Depok, Jawa Barat</p>
+                            <p class="unflip location">Depok</p>
+                            <div class="flip divider"></div>
+                            <p class="flip email">mtzequipment@gmail.com</p>
+                            <p class="flip phone">0812xxxxxxx</p>
+                            <p class="flip website">www.mtzeq.com</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="flex-row d-flex post">
-                    <div class="col-sm-auto">
-                        <div class="trailer"></div>
+                <div class="vendor-item flex-row d-flex post shadow-bottom">
+                    <div class="col-sm-auto trailer">
+                        <div style="width: 75px; height: 75px; background-color: green;"></div>
                     </div>
                     <div class="col">
-                        <div class="title"></div>
+                        <div class="title">MTZ Equipment</div>
                         <div class="paragraf">
-                            <div class="tag"></div>
-                            <p class="description"></p>
-                            <div class="divider"></div>
-                            <p class="address"></p>
-                            <div class="divider"></div>
-                            <p class="phone"></p>
-                            <p class="website"></p>
+                            <div class="tag">
+                                <a href="#" class="badge badge-light badge-outlined">sound system</a>
+                                <a href="#" class="badge badge-light badge-outlined">table &amp; chair</a>
+                                <a href="#" class="badge badge-light badge-outlined">tent</a>
+                            </div>
+                            <p class="flip description">Berdiri sejak 1997, telah melayani 10.000 project, beroperasi di Jabodetabek</p>
+                            <div class="flip divider"></div>
+                            <p class="flip address">Jalan raya margonda no. 525, Depok, Jawa Barat</p>
+                            <p class="unflip location">Depok</p>
+                            <div class="flip divider"></div>
+                            <p class="flip email">mtzequipment@gmail.com</p>
+                            <p class="flip phone">0812xxxxxxx</p>
+                            <p class="flip website">www.mtzeq.com</p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
