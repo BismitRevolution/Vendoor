@@ -20,7 +20,7 @@ class VendorController extends Controller
                         ->join('categories', 'vendors.category_id', '=', 'categories.category_id')
                         ->get();
 
-        return view('vendors.index')->with('vendors', $vendors);
+        return view('pages.explore')->with('vendors', $vendors);
     }
 
     /**

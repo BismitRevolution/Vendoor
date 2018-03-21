@@ -30,23 +30,23 @@
     <div class="col-sm-12 col-md-8">
         <div class="flex-row">
             <div id="field" class="col-12">
-
+                @foreach($vendors as $vendor)
                 <div class="vendor-item flex-row d-flex post shadow-bottom">
                     <div class="col-sm-auto trailer">
                         <div style="width: 75px; height: 75px; background-color: green;"></div>
                     </div>
                     <div class="col">
-                        <div class="title">MTZ Equipment</div>
+                        <div class="title">{{ $vendor->name }}</div>
                         <div class="paragraf">
                             <div class="tag">
                                 <a href="#" class="badge badge-light badge-outlined">sound system</a>
                                 <a href="#" class="badge badge-light badge-outlined">table &amp; chair</a>
                                 <a href="#" class="badge badge-light badge-outlined">tent</a>
                             </div>
-                            <p class="flip description">Berdiri sejak 1997, telah melayani 10.000 project, beroperasi di Jabodetabek</p>
+                            <p class="flip description">{{ $vendor->description }}</p>
                             <div class="flip divider"></div>
-                            <p class="flip address">Jalan raya margonda no. 525, Depok, Jawa Barat</p>
-                            <p class="unflip location">Depok</p>
+                            <p class="flip address">{{ $vendor->address }}</p>
+                            <p class="unflip location">{{ $vendor->location_name }}</p>
                             <div class="flip divider"></div>
                             <p class="flip email">mtzequipment@gmail.com</p>
                             <p class="flip phone">0812xxxxxxx</p>
@@ -54,6 +54,8 @@
                         </div>
                     </div>
                 </div>
+
+                @endforeach
 
                 <div class="vendor-item flex-row d-flex post shadow-bottom">
                     <div class="col-sm-auto trailer">
