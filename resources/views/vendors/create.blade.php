@@ -1,37 +1,64 @@
 @extends('main')
 
+@section('extra-css')
+
+	<link rel="stylesheet" href="{{ asset('css/admin/admin.css') }}">
+
+@endsection
+
 @section('content')
+	
+	</form>
 
 	<div class="container">
-		<h1>Add a new Vendoor!</h1>
-		<form method="POST" action="{{  route('vendors.store') }}" class="form-group">
-			{{ csrf_field() }}
-			<label for="name">Vendor name</label>
-			<input id="name" name="name">
 
-			<label for="description">Vendor description</label>
-			<input id="description" name="description">
+		<h1 id="header">Create a New Vendoor!</h1>
+		
+		<div class="form-template">
+			
+				<form method="POST" action="{{  route('admin.vendors.store') }}">
 
-			<label for="address">Vendor address</label>
-			<input id="address" name="address">
+					{{ csrf_field() }}
 
-			<label for="location_id">Vendor Location</label>
-			<input id="location_id" name="location_id">
+	                <label class="form-group has-float-label form-setting">
+	                	<input id="name" name="name" for="name" class="form-control" type="text" placeholder="Vendor Name"/>
+	                    <span>Name</span>
+	                </label>
 
-			<label for="category_id">Vendor Category</label>
-			<input id="category_id" name="category_id">
+	                <label class="form-group has-float-label form-setting">
+	                    <input id="description" name="description" for="description" class="form-control" type="text" placeholder="Vendor Description"/>
+	                    <span>Description</span>
+	                </label>
 
-			<label for="email">Vendor email</label>
-			<input id="email" name="email" type="email">
+	                <label class="form-group has-float-label form-setting">
+	                    <input id="address" name="address" for="address" class="form-control" type="text" placeholder="Vendor Address"/>
+	                    <span>Address</span>
+	                </label>
 
-			<label for="phone">Vendor phone</label>
-			<input id="phone" name="phone">
+	                <label class="form-group has-float-label form-setting">
+	                    <input id="location_id" name="location_id" for="location_id" class="form-control" type="text" placeholder="Vendor Location"/>
+	                    <span>Location</span>
+	                </label>
 
-			<label for="website">Vendor website</label>
-			<input id="website" name="website">
+	                <label class="form-group has-float-label form-setting">
+	                    <input id="category_id" name="category_id" for="category_id" class="form-control" type="text" placeholder="Vendor Category"/>
+	                    <span>Category</span>
+	                </label>
 
-			<button class="btn btn-lg" type="submit">Submit</button>
+	                <label class="form-group has-float-label form-setting">
+	                    <input id="email" name="email" for="email" class="form-control" type="email" placeholder="Vendor Email"/>
+	                    <span>Email</span>
+	                </label>
+					
+					<label class="form-group has-float-label form-setting">
+	                    <input id="website" name="website" for="website" class="form-control" type="email" placeholder="Vendor Website"/>
+	                    <span>Website</span>
+	                </label>
 
-		</form>
+					<button class="btn btn-block btn-primary" type="submit">Submit</button>
+
+            	</form>
+
+		</div>
 	</div>
 @endsection

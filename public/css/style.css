@@ -33,3 +33,7 @@
     height: 2px;
     background-color: var(--color-blue);
 }
+
+body {
+    font-family: "HKGrotesk-Regular";
+}

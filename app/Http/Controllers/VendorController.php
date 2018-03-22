@@ -23,10 +23,10 @@ class VendorController extends Controller
 
         foreach ($vendors as $vendor) {
             $vendor->tags = DB::table('tags')
-                                ->where('tags.tagged_to', '=', $vendor->vendor_id)
+                                ->where('tags.vendor_id', '=', $vendor->vendor_id)
                                 ->get();
         }
-        return view('pages.explore')->with('vendors', $vendors);
+        return view('vendors.index')->with('vendors', $vendors);
     }
 
     /**
@@ -73,7 +73,7 @@ class VendorController extends Controller
 
         $vendor->save();
 
-        return redirect()->route('vendors.show', $vendor->vendor_id);
+        return redirect()->route('admin.vendors.show', $vendor->vendor_id);
     }
 
     /**
@@ -91,7 +91,7 @@ class VendorController extends Controller
                         ->where('vendors.vendor_id', '=', $id)
                         ->first();
 
-        return view('vendors.show')->with('vendor', $vendor);
+        return view('admin.vendors.show')->with('vendor', $vendor);
     }
 
     /**
@@ -145,7 +145,7 @@ class VendorController extends Controller
 
         $vendor->save();
 
-        return redirect()->route('vendors.show', $vendor->vendor_id);
+        return redirect()->route('admin.vendors.show', $vendor->vendor_id);
     }
 
     /**
@@ -157,9 +157,11 @@ class VendorController extends Controller
     public function destroy($id)
     {
         $post = DB::table('vendors')->where('vendor_id', $id);
+        $tag = DB::table('tags')->where('vendor_id', $id);
 
+        $tag->delete();
         $post->delete();
 
-        return redirect()->route('vendors.index');
+        return redirect()->route('admin.vendors.index');
     }
 }
