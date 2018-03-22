@@ -10,41 +10,33 @@
 <div class="container row">
     <div class="col-sm-12 col-md-4">
         <div id="filter" class="btn-group-vertical btn-block">
-            <select id="filter-category" class="btn btn-secondary btn-block text-center bg-blue">
+            <select id="filter-category" name="cat_key" onchange="this.form.submit()" class="btn btn-secondary btn-block text-center bg-blue">
+                @foreach ($categories as $category)
                 <optgroup>
-                    <option>equipment</option>
+                    @if (!empty($vendors->current_cat) and $category->category_id == $vendors->current_cat)
+                    <option selected value="{{ $category->category_id }}">{{ $category->category_name }}</option>
+                    @else
+                    <option value="{{ $category->category_id }}">{{ $category->category_name }}</option>
+                    @endif
                 </optgroup>
-                <optgroup>
-                    <option>catering</option>
-                </optgroup>
-                <optgroup>
-                    <option>place</option>
-                </optgroup>
-                <optgroup>
-                    <option>printing</option>
-                </optgroup>
-                <optgroup>
-                    <option>merchandise</option>
-                </optgroup>
-                <optgroup>
-                    <option>transportation</option>
-                </optgroup>
+                @endforeach
                 <optgroup>
                 </optgroup>
             </select>
-            <select id="filter-location" class="btn btn-secondary btn-block bg-blue">
+            <select id="filter-location" name="loc_key" onchange="this.form.submit()" class="btn btn-secondary btn-block bg-blue">
+                @foreach ($locations as $location)
                 <optgroup>
-                    <option>Jakarta</option>
+                    @if (!empty($vendors->current_loc) and $location->location_id == $vendors->current_loc)
+                    <option selected value="{{ $location->location_id }}">{{ $location->location_name }}</option>
+                    @else
+                    <option value="{{ $location->location_id }}">{{ $location->location_name }}</option>
+                    @endif
                 </optgroup>
-                <optgroup>
-                    <option>Bogor</option>
-                </optgroup>
-                <optgroup>
-                    <option>Depok</option>
-                </optgroup>
+                @endforeach
                 <optgroup>
                 </optgroup>
             </select>
+        </form>
             <button type="button" class="btn btn-secondary btn-block bg-blue">most viewed</button>
             <button id="filter-fill" type="button" class="btn btn-secondary bg-blue" disabled style="height: 100%;"></button>
         </div>
