@@ -16,7 +16,9 @@
 // });
 
 Route::get('/', 'PageController@index')->name('index');
-Route::get('/explore', 'VendorController@index')->name('explore');
+Route::get('/explore', 'FilterController@search')->name('explore');
+
+Route::get('/search', 'FilterController@search')->name('search');
 
 Auth::routes();
 

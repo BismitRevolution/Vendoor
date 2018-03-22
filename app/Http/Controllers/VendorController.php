@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Vendor;
+use App\Tag;
 use Illuminate\Support\Facades\DB;
 
 class VendorController extends Controller
@@ -14,12 +15,17 @@ class VendorController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
+    {
         $vendors = DB::table('vendors')
                         ->join('locations', 'vendors.location_id', '=', 'locations.location_id')
                         ->join('categories', 'vendors.category_id', '=', 'categories.category_id')
                         ->get();
 
+        foreach ($vendors as $vendor) {
+            $vendor->tags = DB::table('tags')
+                                ->where('tags.tagged_to', '=', $vendor->vendor_id)
+                                ->get();
+        }
         return view('pages.explore')->with('vendors', $vendors);
     }
 
@@ -47,7 +53,10 @@ class VendorController extends Controller
             'description'   => 'required',
             'address'       => 'required',
             'location_id'   => 'required',
-            'category_id'   => 'required'
+            'category_id'   => 'required',
+            'email'         => 'required|email|max:255',
+            'phone'         => 'required',
+            'website'       => 'required'
         ));
 
 
@@ -58,7 +67,10 @@ class VendorController extends Controller
         $vendor->address = $request->address;
         $vendor->location_id = $request->location_id;
         $vendor->category_id = $request->category_id;
-        
+        $vendor->email = $request->email;
+        $vendor->phone = $request->phone;
+        $vendor->website = $request->website;
+
         $vendor->save();
 
         return redirect()->route('vendors.show', $vendor->vendor_id);
@@ -72,7 +84,7 @@ class VendorController extends Controller
      */
     public function show($id)
     {
-        
+
         $vendor = DB::table('vendors')
                         ->join('locations', 'vendors.location_id', '=', 'locations.location_id')
                         ->join('categories', 'vendors.category_id', '=', 'categories.category_id')
@@ -113,7 +125,10 @@ class VendorController extends Controller
             'description'   => 'required',
             'address'       => 'required',
             'location_id'   => 'required',
-            'category_id'   => 'required'
+            'category_id'   => 'required',
+            'email'         => 'required|email|max:255',
+            'phone'         => 'required',
+            'website'       => 'required'
         ));
 
 
@@ -124,7 +139,10 @@ class VendorController extends Controller
         $vendor->address = $request->input('address');
         $vendor->location_id = $request->input('location_id');
         $vendor->category_id = $request->input('category_id');
-        
+        $vendor->email = $request->input('email');
+        $vendor->phone = $request->input('phone');
+        $vendor->website = $request->input('website');
+
         $vendor->save();
 
         return redirect()->route('vendors.show', $vendor->vendor_id);
