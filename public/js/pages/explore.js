@@ -5,6 +5,13 @@ $(document).ready(function () {
         $("#filter-fill").addClass("hidden");
     }
 
+    $(".jquery-select2").select2();
+
+    $("#filter-category").next().find(".select2-selection--single").each(function() {
+        $(this).addClass("bg-blue");
+        $(this).find(".select2-selection__rendered").addClass("white");
+    });
+
     $(".vendor-item").each(function() {
         $(this).addClass("off");
     });

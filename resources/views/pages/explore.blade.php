@@ -10,7 +10,7 @@
 <div class="container row">
     <div class="col-sm-12 col-md-4">
         <div id="filter" class="btn-group-vertical btn-block">
-            <select id="filter-category" name="cat_key" onchange="this.form.submit()" class="btn btn-secondary btn-block text-center bg-blue">
+            <select id="filter-category" name="cat_key" onchange="this.form.submit()" class="btn-block jquery-select2">
                 @foreach ($categories as $category)
                 <optgroup>
                     @if (!empty($vendors->current_cat) and $category->category_id == $vendors->current_cat)
@@ -23,18 +23,14 @@
                 <optgroup>
                 </optgroup>
             </select>
-            <select id="filter-location" name="loc_key" onchange="this.form.submit()" class="btn btn-secondary btn-block bg-blue">
+            <select id="filter-location" name="loc_key" onchange="this.form.submit()" class="btn-block jquery-select2">
                 @foreach ($locations as $location)
-                <optgroup>
                     @if (!empty($vendors->current_loc) and $location->location_id == $vendors->current_loc)
                     <option selected value="{{ $location->location_id }}">{{ $location->location_name }}</option>
                     @else
                     <option value="{{ $location->location_id }}">{{ $location->location_name }}</option>
                     @endif
-                </optgroup>
                 @endforeach
-                <optgroup>
-                </optgroup>
             </select>
         </form>
             <button type="button" class="btn btn-secondary btn-block bg-blue">most viewed</button>
