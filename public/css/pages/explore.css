@@ -28,15 +28,8 @@
     -moz-appearance: none;
 }
 
-#filter option {
-    height: 150px;
-}
-
-#filter .dropdown-menu {
-    width: inherit;
-    border-radius: 0;
-    max-height: 200px;
-    overflow-y: scroll;
+#filter option p:hover {
+    color: red;
 }
 
 .post {

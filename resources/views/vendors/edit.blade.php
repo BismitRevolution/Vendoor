@@ -14,10 +14,10 @@
 
 			<label for="">Vendor Name</label>
 			<input name="name" placeholder="{{ $vendor->name }}">
-			
+
 			<label for="">Vendor Description</label>
 			<input name="description" placeholder="{{ $vendor->description }}">
-			
+
 			<label for="">Vendor Address</label>
 			<input name="address" placeholder="{{ $vendor->address }}">
 
@@ -26,6 +26,15 @@
 
 			<label for="">Vendor Category</label>
 			<input name="category_id" placeholder="{{ $vendor->category_name }}">
+
+			<label for="">Vendor email</label>
+			<input name="email" type="email">
+
+			<label for="">Vendor phone</label>
+			<input name="phone">
+
+			<label for="">Vendor website</label>
+			<input name="website">
 
 			<button type="submit">Update</button>
 		</form>
@@ -39,5 +48,5 @@
 		<small>dilihat sebanyak {{ $vendor->view_count }}</small>
 
 	</div>
-	
+
 @endsection

@@ -15,6 +15,9 @@ class LocationsTableSeeder extends Seeder
             'location_name' => 'Jakarta'
         ]);
         DB::table('locations')->insert([
+            'location_name' => 'Depok'
+        ]);
+        DB::table('locations')->insert([
             'location_name' => 'Bandung'
         ]);
         DB::table('locations')->insert([
@@ -28,6 +31,6 @@ class LocationsTableSeeder extends Seeder
         ]);
         DB::table('locations')->insert([
             'location_name' => 'Semarang'
-        ]);    
+        ]);
     }
 }

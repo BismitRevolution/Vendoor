@@ -21,6 +21,15 @@
 			<label for="category_id">Vendor Category</label>
 			<input id="category_id" name="category_id">
 
+			<label for="email">Vendor email</label>
+			<input id="email" name="email" type="email">
+
+			<label for="phone">Vendor phone</label>
+			<input id="phone" name="phone">
+
+			<label for="website">Vendor website</label>
+			<input id="website" name="website">
+
 			<button class="btn btn-lg" type="submit">Submit</button>
 
 		</form>
