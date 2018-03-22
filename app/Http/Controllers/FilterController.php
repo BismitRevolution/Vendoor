@@ -34,28 +34,35 @@ class FilterController extends Controller
         return $result;
     }
 
+    public static function addView($id) {
+        $target = Vendor::find($id);
+        $target->view_count = $target->view_count + 1;
+        // dd($target->view_count);
+        $target->save();
+    }
+
     public function search(Request $request) {
 
         $result = DB::table('vendors')
-        ->join('locations', 'vendors.location_id', '=', 'locations.location_id')
-        ->join('categories', 'vendors.category_id', '=', 'categories.category_id');
+                        ->join('locations', 'vendors.location_id', '=', 'locations.location_id')
+                        ->join('categories', 'vendors.category_id', '=', 'categories.category_id');
 
         if (null !== $request->input('key')) {
             $key = $request->input('key');
             $vendors = DB::table('vendors')
-            ->select('vendors.vendor_id')
-            ->where('vendors.name', 'like', '%'.$key.'%')
-            ->orWhere('vendors.description', 'like', '%'.$key.'%')
-            ->orWhere('vendors.address', 'like', '%'.$key.'%')
-            ->orWhere('vendors.website', 'like', '%'.$key.'%')
-            ->distinct()
-            ->get()->toArray();
+                            ->select('vendors.vendor_id')
+                            ->where('vendors.name', 'like', '%'.$key.'%')
+                            ->orWhere('vendors.description', 'like', '%'.$key.'%')
+                            ->orWhere('vendors.address', 'like', '%'.$key.'%')
+                            ->orWhere('vendors.website', 'like', '%'.$key.'%')
+                            ->distinct()
+                            ->get()->toArray();
             // dd($vendors);
             $tags = DB::table('tags')
-            ->select('tags.vendor_id')
-            ->where('tags.tag_name', 'like', '%'.$key.'%')
-            ->distinct()
-            ->get()->toArray();
+                        ->select('tags.vendor_id')
+                        ->where('tags.tag_name', 'like', '%'.$key.'%')
+                        ->distinct()
+                        ->get()->toArray();
             // dd($tags);
 
             $result = $result->whereIn('vendors.vendor_id', self::toArray($vendors + $tags));
@@ -75,6 +82,7 @@ class FilterController extends Controller
         $result = $result->get();
 
         foreach ($result as $item) {
+            self::addView($item->vendor_id);
             $item->tags = DB::table('tags')
                                 ->where('tags.vendor_id', '=', $item->vendor_id)
                                 ->get();
@@ -100,8 +108,8 @@ class FilterController extends Controller
         $location = Location::all();
 
         return view('pages.explore')
-            ->with('vendors', $result)
-            ->with('categories', $category)
-            ->with('locations', $location);
+                ->with('vendors', $result)
+                ->with('categories', $category)
+                ->with('locations', $location);
     }
 }
