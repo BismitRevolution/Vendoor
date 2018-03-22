@@ -63,11 +63,11 @@
                             <div class="tag">
                                 <p class="unflip">
                                     @foreach ($vendor->tags as $tag)
-                                        {{ $tag->name }},
+                                        {{ $tag->tag_name }},
                                     @endforeach
                                 </p>
                                 @foreach ($vendor->tags as $tag)
-                                <a href="#" class="flip badge badge-light badge-outlined">{{ $tag->name }}</a>
+                                <a href="#" class="flip badge badge-light badge-outlined">{{ $tag->tag_name }}</a>
                                 @endforeach
                             </div>
                             <p class="flip description" style="line-height: 1.5;">{{ $vendor->description }}</p>

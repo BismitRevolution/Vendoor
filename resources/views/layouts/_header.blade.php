@@ -2,9 +2,9 @@
 <div class="container d-flex flex-row align-items-center blue bg-white">
     <div id="nav-search" class="col blue">
         <div class="">
-            <form role="form">
+            <form role="form" action="{{ route('search') }}" method="GET">
                 <label class="form-group has-float-label">
-                    <input class="form-control" type="email" placeholder="search vendor"/>
+                    <input name="key" class="form-control" type="text" placeholder="search vendor"/>
                     <span>search</span>
                 </label>
             </form>
@@ -18,9 +18,9 @@
     </div>
     <div id="nav-search" class="col blue">
         <div class="">
-            <form role="form">
+            <form role="form" action="{{ route('search') }}" method="GET">
                 <label class="form-group has-float-label">
-                    <input class="form-control" type="email" placeholder="search vendor"/>
+                    <input name="key" class="form-control" type="text" placeholder="search vendor"/>
                     <span>search</span>
                 </label>
             </form>

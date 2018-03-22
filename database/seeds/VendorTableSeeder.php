@@ -12,7 +12,7 @@ class VendorTableSeeder extends Seeder
     public function run()
     {
         DB::table('vendors')->insert([
-            'name' => 'MTZ Equipment',
+            'name' => 'MTZ Equipment 1',
             'description' => 'Berdiri sejak 1997, telah melayani 10.000 project, beroperasi di Jabodetabek',
             'address' => 'Jalan raya margonda no. 525, Depok, Jawa Barat',
             'email' => 'mtzequipment@gmail.com',
@@ -25,7 +25,7 @@ class VendorTableSeeder extends Seeder
         ]);
 
         DB::table('vendors')->insert([
-            'name' => 'MTZ Equipment',
+            'name' => 'MTZ Equipment 2',
             'description' => 'Berdiri sejak 1997, telah melayani 10.000 project, beroperasi di Jabodetabek',
             'address' => 'Jalan raya margonda no. 525, Depok, Jawa Barat',
             'email' => 'mtzequipment@gmail.com',
@@ -38,7 +38,7 @@ class VendorTableSeeder extends Seeder
         ]);
 
         DB::table('vendors')->insert([
-            'name' => 'MTZ Equipment',
+            'name' => 'MTZ Equipment 3',
             'description' => 'Berdiri sejak 1997, telah melayani 10.000 project, beroperasi di Jabodetabek',
             'address' => 'Jalan raya margonda no. 525, Depok, Jawa Barat',
             'email' => 'mtzequipment@gmail.com',

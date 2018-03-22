@@ -15,9 +15,9 @@ class CreateTagsTable extends Migration
     {
         Schema::create('tags', function (Blueprint $table) {
             $table->increments('tag_id')->unsigned();
-            $table->string('name');
-            $table->integer('tagged_to')->unsigned();
-            $table->foreign('tagged_to')->references('vendor_id')->on('vendors');
+            $table->string('tag_name');
+            $table->integer('vendor_id')->unsigned();
+            $table->foreign('vendor_id')->references('vendor_id')->on('vendors');
         });
     }
 
