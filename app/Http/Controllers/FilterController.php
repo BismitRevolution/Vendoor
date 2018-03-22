@@ -63,16 +63,14 @@ class FilterController extends Controller
             $result = $result->whereIn('vendors.vendor_id', self::toArray($vendors + $tags));
         }
 
+
         if (null !== $request->input('cat_key')) {
             $cat_key = $request->input('cat_key');
-            $result->current_cat = $cat_key;
             $result = $result->where('vendors.category_id', '=', $cat_key);
             // dd($cat_key);
         }
-
         if (null !== $request->input('loc_key')) {
             $loc_key = $request->input('loc_key');
-            $result->current_loc = $loc_key;
             $result = $result->where('vendors.location_id', '=', $loc_key);
             // dd($loc_key);
         }
@@ -85,6 +83,18 @@ class FilterController extends Controller
                                 ->get();
         }
         // dd($result);
+
+        if (null !== $request->input('cat_key')) {
+            $cat_key = $request->input('cat_key');
+            $result->current_cat = $cat_key;
+            // dd($cat_key);
+        }
+
+        if (null !== $request->input('loc_key')) {
+            $loc_key = $request->input('loc_key');
+            $result->current_loc = $loc_key;
+            // dd($loc_key);
+        }
 
         $category = Category::all();
         $location = Location::all();
