@@ -14,12 +14,12 @@
 	</div>
 	
 
-	<form action="{{ route('vendors.edit', ['id' => $vendor->vendor_id]) }}" method="GET">
+	<form action="{{ route('admin.vendors.edit', ['id' => $vendor->vendor_id]) }}" method="GET">
 		<button type="submit">Edit Vendor</button>	
 	</form>
 	
 
-	<form action="{{ route('vendors.destroy', ['id' => $vendor->vendor_id]) }}" method="POST">
+	<form action="{{ route('admin.vendors.destroy', ['id' => $vendor->vendor_id]) }}" method="POST">
    		<input type="hidden" name="_method" value="DELETE" />
    		<button type="submit">Delete Vendor</button>
     	{!! csrf_field() !!}
