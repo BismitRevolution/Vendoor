@@ -45,10 +45,15 @@
                     <div class="col-sm-auto trailer">
                         @foreach ($vendor->media as $photo)
                             @if ($loop->first)
-                                <div style="width: 75px; height: 75px; background: url('storage/{{ $photo->path }}') no-repeat center top; background-size: cover;"></div>
+                                <div style="width: 85px; height: 85px; background: url('storage/{{ $photo->path }}') no-repeat center top; background-size: cover;"></div>
                             @endif
-                            <div class="flip" style="margin-top: 10px; width: 25px; height: 25px; background: url('storage/{{ $photo->path }}') no-repeat center top; background-size: cover;"></div>
                         @endforeach
+
+                        <div class="flip row" style="max-width: 85px;">
+                            @foreach ($vendor->media as $photo)
+                            <div class="col-4" style="margin-top: 10px; width: 25px; height: 25px; background: url('storage/{{ $photo->path }}') no-repeat center top; background-size: cover;"></div>
+                            @endforeach
+                        </div>
                     </div>
                     <div class="col">
                         <div class="title blue bold">{{ $vendor->name }}</div>
