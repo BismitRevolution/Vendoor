@@ -26,7 +26,7 @@ class VendorController extends Controller
                                 ->where('tags.vendor_id', '=', $vendor->vendor_id)
                                 ->get();
         }
-        return view('vendors.index')->with('vendors', $vendors);
+        return view('vendors.index')->with(['vendors' => $vendors]);
     }
 
     /**
@@ -36,7 +36,10 @@ class VendorController extends Controller
      */
     public function create()
     {
-        return view('vendors.create');
+        $locations = DB::table('locations')->get();
+        $categories = DB::table('categories')->get();
+        
+        return view('vendors.create')->with(['locations' => $locations, 'categories' => $categories]);
     }
 
     /**
@@ -48,7 +51,8 @@ class VendorController extends Controller
 
     public function store(Request $request)
     {
-        $this->validate($request, array(
+
+        $request->validate([
             'name'          => 'required|max:255',
             'description'   => 'required',
             'address'       => 'required',
@@ -57,8 +61,7 @@ class VendorController extends Controller
             'email'         => 'required|email|max:255',
             'phone'         => 'required',
             'website'       => 'required'
-        ));
-
+        ]);
 
         $vendor = new Vendor;
 
@@ -70,8 +73,27 @@ class VendorController extends Controller
         $vendor->email = $request->email;
         $vendor->phone = $request->phone;
         $vendor->website = $request->website;
-
         $vendor->save();
+
+        for ($i=0; $i < 100; $i++) { 
+            $tag = new Tag;
+            $tag->name = $request->tagn;
+        }
+
+        $counter = 1;
+        $var = 'tags' . $counter;
+
+        dd($request);
+
+        while (null !== $request->input($var)) {
+            $tag = new Tag;
+            $tag->name = $request->input($var);
+            $tag->vendor_id = $vendor->vendor_id;
+            dd($tag);
+            $tag->save();
+            $counter += 1;
+            $var = 'tags' . $counter;
+        }
 
         return redirect()->route('admin.vendors.show', $vendor->vendor_id);
     }
@@ -91,7 +113,7 @@ class VendorController extends Controller
                         ->where('vendors.vendor_id', '=', $id)
                         ->first();
 
-        return view('admin.vendors.show')->with('vendor', $vendor);
+        return view('vendors.show')->with('vendor', $vendor);
     }
 
     /**
@@ -108,7 +130,10 @@ class VendorController extends Controller
                         ->where('vendors.vendor_id', '=', $id)
                         ->first();
 
-        return view('vendors.edit')->with('vendor', $vendor);
+        $locations = DB::table('locations')->get();
+        $categories = DB::table('categories')->get();
+
+        return view('vendors.edit')->with(['vendor' => $vendor, 'locations' => $locations, 'categories' => $categories]);
     }
 
     /**
