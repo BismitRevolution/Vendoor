@@ -18,7 +18,7 @@
 @else
 <div id="nav" class="container-fluid d-flex flex-row align-items-center blue bg-white">
     <div id="nav-brand" class="col-sm-auto blue">
-        <a href="#" class="blue">VENDOOR</a>
+        <a href="{{ route('index') }}" class="blue">VENDOOR</a>
     </div>
     <div id="nav-search" class="col blue">
         <div class="">
