@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title', config('app.name'))
+@section('title', 'Home')
 
 @section('extra-css')
 <!-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> -->

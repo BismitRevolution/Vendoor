@@ -100,7 +100,7 @@ class VendorController extends Controller
                     '/public/'.$vendor->vendor_id
                 );
                 $media = new Media;
-                $media->path = $path;
+                $media->path = substr($path, 7);
                 $media->vendor_id = $vendor->vendor_id;
                 $media->save();
             }

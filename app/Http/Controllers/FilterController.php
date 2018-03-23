@@ -92,6 +92,9 @@ class FilterController extends Controller
             $item->tags = DB::table('tags')
                                 ->where('tags.vendor_id', '=', $item->vendor_id)
                                 ->get();
+            $item->media = DB::table('media')
+                                ->where('media.vendor_id', '=', $item->vendor_id)
+                                ->get();
         }
         // dd($result);
 

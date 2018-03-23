@@ -1,6 +1,6 @@
 @extends('main')
 
-@section('title', 'Explore Vendor')
+@section('title', 'Explore')
 
 @section('extra-css')
 <link rel="stylesheet" href="{{ asset('css/pages/explore.css') }}">
@@ -36,13 +36,19 @@
             <button id="filter-fill" type="button" class="btn btn-secondary bg-blue" disabled style="height: 100%;"></button>
         </div>
     </div>
+
     <div class="col-sm-12 col-md-8">
         <div class="flex-row">
             <div id="field" class="col-12">
                 @foreach ($vendors as $vendor)
                 <div class="vendor-item flex-row d-flex post shadow-bottom">
                     <div class="col-sm-auto trailer">
-                        <div style="width: 75px; height: 75px; background-color: green;"></div>
+                        @foreach ($vendor->media as $photo)
+                            @if ($loop->first)
+                                <div style="width: 75px; height: 75px; background: url('storage/{{ $photo->path }}') no-repeat center top; background-size: cover;"></div>
+                            @endif
+                            <div class="flip" style="margin-top: 10px; width: 25px; height: 25px; background: url('storage/{{ $photo->path }}') no-repeat center top; background-size: cover;"></div>
+                        @endforeach
                     </div>
                     <div class="col">
                         <div class="title blue bold">{{ $vendor->name }}</div>

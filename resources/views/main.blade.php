@@ -36,7 +36,7 @@
         <!-- Google Open Sans -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
 
-        <title>@yield('title')</title>
+        <title>Vendoor | @yield('title')</title>
     </head>
     <body>
         @include('layouts._header')
@@ -66,7 +66,7 @@
 
         <!-- JQuery Select2 -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-        
+
         <!-- Customization -->
         <script type="application/javascript" src="{{ asset('js/_header.js') }}"></script>
         <script type="application/javascript" src="{{ asset('js/_footer.js') }}"></script>
