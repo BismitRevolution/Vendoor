@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Vendor;
 use App\Tag;
+use App\Media;
 use Illuminate\Support\Facades\DB;
 
 class VendorController extends Controller
@@ -38,7 +39,7 @@ class VendorController extends Controller
     {
         $locations = DB::table('locations')->get();
         $categories = DB::table('categories')->get();
-        
+
         return view('vendors.create')->with(['locations' => $locations, 'categories' => $categories]);
     }
 
@@ -51,7 +52,6 @@ class VendorController extends Controller
 
     public function store(Request $request)
     {
-
         $request->validate([
             'name'          => 'required|max:255',
             'description'   => 'required',
@@ -75,7 +75,7 @@ class VendorController extends Controller
         $vendor->website = $request->website;
         $vendor->save();
 
-        for ($i=0; $i < 100; $i++) { 
+        for ($i=0; $i < 100; $i++) {
             $tag = new Tag;
             $tag->name = $request->tagn;
         }
@@ -83,16 +83,27 @@ class VendorController extends Controller
         $counter = 1;
         $var = 'tags' . $counter;
 
-        dd($request);
-
         while (null !== $request->input($var)) {
             $tag = new Tag;
             $tag->name = $request->input($var);
             $tag->vendor_id = $vendor->vendor_id;
-            dd($tag);
             $tag->save();
             $counter += 1;
             $var = 'tags' . $counter;
+        }
+
+        $files = $request->file('media');
+
+        if($request->hasFile('media')) {
+            foreach ($files as $file) {
+                $path = $file->store(
+                    '/public/'.$vendor->vendor_id
+                );
+                $media = new Media;
+                $media->path = $path;
+                $media->vendor_id = $vendor->vendor_id;
+                $media->save();
+            }
         }
 
         return redirect()->route('admin.vendors.show', $vendor->vendor_id);
@@ -183,8 +194,10 @@ class VendorController extends Controller
     {
         $post = DB::table('vendors')->where('vendor_id', $id);
         $tag = DB::table('tags')->where('vendor_id', $id);
+        $media = DB::table('media')->where('vendor_id', $id);
 
         $tag->delete();
+        $media->delete();
         $post->delete();
 
         return redirect()->route('admin.vendors.index');

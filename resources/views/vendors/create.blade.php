@@ -19,8 +19,8 @@
 @endif
 
 <div class="form-template">
-	
-	<form method="POST" action="{{  route('admin.vendors.store') }}">
+
+	<form method="POST" action="{{  route('admin.vendors.store') }}" enctype="multipart/form-data">
 		{{ csrf_field() }}
 		<label class="form-group has-float-label form-setting">
 			<input id="name" name="name" for="name" class="form-control" type="text" placeholder="Vendor Name" required/>
@@ -42,7 +42,7 @@
 			<input id="email" name="email" for="email" class="form-control" type="email" placeholder="Vendor Email" required/>
 			<span>Email</span>
 		</label>
-		
+
 		<div class="row">
 			<div class="col-6">
 				<label class="form-group has-float-label form-setting">
@@ -57,7 +57,7 @@
 					</div>
 				</label>
 			</div>
-			
+
 			<div class="col-6">
 				<label class="form-group has-float-label form-setting">
 					<div class="input-group-prepend">
@@ -72,17 +72,20 @@
 				</label>
 			</div>
 		</div>
-		
+
 	</div>
-	
+
 	<label class="form-group has-float-label form-setting">
 		<input id="website" name="website" for="website" class="form-control" type="text" placeholder="Vendor Website" required/>
 		<span>Website</span>
 	</label>
-	
-	<div id="tags" class="tags">
-		
-	</div>
+
+	<div id="tags"></div>
+
+	<label class="form-group has-float-label form-setting">
+		<input id="media" name="media[]" class="form-control-file" type="file" multiple="multiple"/>
+		<span>Photos</span>
+	</label>
 
 	<button class="btn btn-danger btn-setting" style="padding-left: 30px; padding-right: 30px" type="button" onclick="makeField()">Add Tags</button>
 
@@ -97,7 +100,7 @@
 		counter = 1;
 		function makeField(){
 			var f = document.getElementById('tags');
-			f.innerHTML += 
+			f.innerHTML +=
 			`<label class="form-group has-float-label form-setting">
 				<input name="tags` + counter +`" class="form-control" type="text" placeholder="Tag Name" required/>
 				<span>Tag ` + counter + `</span>
