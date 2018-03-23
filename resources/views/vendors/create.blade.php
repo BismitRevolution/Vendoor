@@ -89,7 +89,7 @@
 
 	<button class="btn btn-danger btn-setting" style="padding-left: 30px; padding-right: 30px" type="button" onclick="makeField()">Add Tags</button>
 
-	<button id="submit" class="btn btn-block btn-primary btn-setting" type="button" onclick="save()">Submit</button>
+	<button id="submit" class="btn btn-block btn-primary btn-setting" type="submit">Submit</button>
 
 </form>
 </div>
@@ -99,18 +99,16 @@
 	<script>
 		counter = 1;
 		function makeField(){
-			var f = document.getElementById('tags');
-			f.innerHTML +=
-			`<label class="form-group has-float-label form-setting">
-				<input name="tags` + counter +`" class="form-control" type="text" placeholder="Tag Name" required/>
+			$(`<label class="form-group has-float-label form-setting">
+				<input name="tags` + counter +`" class="form-control" type="text" placeholder="Tag Name"/>
 				<span>Tag ` + counter + `</span>
 			</label>
-			`
+			`).appendTo('#form');
 			counter++;
 		}
 
 		function save() {
-			console.log($('#form').serialize());
+			$("#form").submit();
 		}
 	</script>
 @endsection
