@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(LocationsTableSeeder::class);
         $this->call(VendorTableSeeder::class);
         $this->call(TagsTableSeeder::class);
+        $this->call(MediaTableSeeder::class);
     }
 }

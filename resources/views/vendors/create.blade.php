@@ -20,7 +20,7 @@
 
 <div class="form-template">
 
-	<form method="POST" action="{{  route('admin.vendors.store') }}" enctype="multipart/form-data">
+	<form id="form" method="POST" action="{{  route('admin.vendors.store') }}" enctype="multipart/form-data">
 		{{ csrf_field() }}
 		<label class="form-group has-float-label form-setting">
 			<input id="name" name="name" for="name" class="form-control" type="text" placeholder="Vendor Name" required/>
@@ -89,7 +89,7 @@
 
 	<button class="btn btn-danger btn-setting" style="padding-left: 30px; padding-right: 30px" type="button" onclick="makeField()">Add Tags</button>
 
-	<button id="submit" class="btn btn-block btn-primary btn-setting" type="save()">Submit</button>
+	<button id="submit" class="btn btn-block btn-primary btn-setting" type="button" onclick="save()">Submit</button>
 
 </form>
 </div>
@@ -110,7 +110,7 @@
 		}
 
 		function save() {
-			this.form.submit();
+			console.log($('#form').serialize());
 		}
 	</script>
 @endsection

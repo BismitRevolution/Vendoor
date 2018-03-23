@@ -52,6 +52,7 @@ class VendorController extends Controller
 
     public function store(Request $request)
     {
+        dd($request);
         $request->validate([
             'name'          => 'required|max:255',
             'description'   => 'required',
