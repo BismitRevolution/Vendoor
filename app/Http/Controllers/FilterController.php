@@ -73,10 +73,16 @@ class FilterController extends Controller
             $result = $result->where('vendors.category_id', '=', $cat_key);
             // dd($cat_key);
         }
+
         if (null !== $request->input('loc_key')) {
             $loc_key = $request->input('loc_key');
             $result = $result->where('vendors.location_id', '=', $loc_key);
             // dd($loc_key);
+        }
+
+        if (null != $request->input('sorted')) {
+            $result = $result->orderBy('vendors.view_count', 'desc');
+            // dd($result);
         }
 
         $result = $result->get();
