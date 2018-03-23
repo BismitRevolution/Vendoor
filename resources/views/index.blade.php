@@ -10,19 +10,19 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <a href="#" class="col box bg-blue">
+        <a href="{{ route('search', ['cat_key' => '1']) }}" class="col box bg-blue">
             <div class="text-center">
                 <img src="{{ asset('img/equipment.png')}}" alt="" width="100px">
                 <p class="white">equipment</p>
             </div>
         </a>
-        <a href="#" class="col box bg-blue-semi-light">
+        <a href="{{ route('search', ['cat_key' => '2']) }}" class="col box bg-blue-semi-light">
             <div class="text-center">
                 <img src="{{ asset('img/catering.png')}}" alt="" width="100px">
                 <p class="white">catering</p>
             </div>
         </a>
-        <a href="#" class="col box bg-blue-light">
+        <a href="{{ route('search', ['cat_key' => '3']) }}" class="col box bg-blue-light">
             <div class="text-center">
                 <img src="{{ asset('img/place.png')}}" alt="" width="100px">
                 <p class="white">place</p>
@@ -40,19 +40,19 @@
     </div>
 
     <div class="row">
-        <a href="#" class="col box bg-blue-light">
+        <a href="{{ route('search', ['cat_key' => '4']) }}" class="col box bg-blue-light">
             <div class="text-center">
                 <img src="{{ asset('img/printing.png')}}" alt="" width="100px">
                 <p class="white">printing</p>
             </div>
         </a>
-        <a href="#" class="col box bg-blue-semi-light">
+        <a href="{{ route('search', ['cat_key' => '5']) }}" class="col box bg-blue-semi-light">
             <div class="text-center">
                 <img src="{{ asset('img/merchandise.png')}}" alt="" width="100px">
                 <p class="white">merchandise</p>
             </div>
         </a>
-        <a href="#" class="col box bg-blue">
+        <a href="{{ route('search', ['cat_key' => '6']) }}" class="col box bg-blue">
             <div class="text-center">
                 <img src="{{ asset('img/transportation.png')}}" alt="" width="100px">
                 <p class="white">transportation</p>
