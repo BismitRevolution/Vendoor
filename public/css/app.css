@@ -49,6 +49,10 @@
     src: url('/fonts/LuloCleanTwoBold.ttf');
 }
 
+.bg-transparent {
+    background: rgba(255, 255, 255, 0);
+}
+
 .bg-white {
     background: white !important;
 }
@@ -79,6 +83,10 @@
 
 .blue {
     color: var(--color-blue) !important;
+}
+
+.br-white {
+    border: 2px solid white !important;
 }
 
 .br-blue-semi-light {

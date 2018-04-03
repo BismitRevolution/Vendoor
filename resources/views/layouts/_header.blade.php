@@ -1,15 +1,15 @@
 @if(Request::is('/'))
-<div class="container d-flex flex-row align-items-center blue bg-white">
+<div class="container d-flex flex-row align-items-center bg-transparent white">
     <div id="nav-search" class="col blue">
         <div class="">
             <form role="form" action="{{ route('search') }}" method="GET">
                 <label class="form-group has-float-label">
                     @if (!empty($vendors->current_key))
-                    <input name="key" class="form-control" type="text" value="{{ $vendors->current_key }}"/>
+                    <input name="key" class="form-control white bg-transparent" type="text" value="{{ $vendors->current_key }}" style="border-color: white !important;"/>
                     @else
-                    <input name="key" class="form-control" type="text" placeholder="search vendor"/>
+                    <input name="key" class="form-control white bg-transparent" type="text" placeholder="search vendor" style="border-color: white !important;"/>
                     @endif
-                    <span>search</span>
+                    <span class="white">search</span>
                 </label>
             <!-- </form> -->
         </div>

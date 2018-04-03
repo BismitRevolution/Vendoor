@@ -32,10 +32,10 @@
 
     <div id="middle" class="blue">
         <div class="title">
-            <h1 class="text-center">Vendoor</h1>
+            <h1 class="text-center white">Vendoor</h1>
         </div>
         <div class="paragraf">
-            <p class="text-center">your door to the best vendors</p>
+            <p class="text-center white">your door to the best vendors</p>
         </div>
     </div>
 
@@ -61,13 +61,13 @@
     </div>
 
     <div class="row" style="margin-top: 45px; margin-bottom: 55px;">
-        <div class="col box br-blue">
+        <div class="col box br-white">
             <div class="row">
-                <div class="round bg-blue col"></div>
-                <div class="round bg-blue col"></div>
-                <div class="round bg-blue col"></div>
-                <div class="round bg-blue col"></div>
-                <div class="round bg-blue col"></div>
+                <div class="round bg-white col"></div>
+                <div class="round bg-white col"></div>
+                <div class="round bg-white col"></div>
+                <div class="round bg-white col"></div>
+                <div class="round bg-white col"></div>
             </div>
         </div>
     </div>

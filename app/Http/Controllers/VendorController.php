@@ -52,6 +52,7 @@ class VendorController extends Controller
 
     public function store(Request $request)
     {
+        dd($request)
         $request->validate([
             'name'          => 'required|max:255',
             'description'   => 'required',
@@ -85,7 +86,7 @@ class VendorController extends Controller
 
         while (null !== $request->input($var)) {
             $tag = new Tag;
-            $tag->tag_name = $request->input($var);
+            $tag->name = $request->input($var);
             $tag->vendor_id = $vendor->vendor_id;
             $tag->save();
             $counter += 1;
