@@ -159,3 +159,7 @@
 .italic {
     font-style: italic;
 }
+
+body {
+    font-size: 1.3rem;
+}

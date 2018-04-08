@@ -18,7 +18,7 @@
         <!-- Foundation ZURB -->
         <!-- <link rel="stylesheet" href="{{ asset('css/vendor/foundation.min.css') }}"> -->
         <!-- Lightbox -->
-        <!-- <link rel="stylesheet" href="{{ asset('css/vendor/lightbox.min.css') }}"> -->
+        <link rel="stylesheet" href="{{ asset('css/vendor/lightbox.css') }}">
         <!-- JQuery Select2 -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
         <!-- Basic Style -->
@@ -63,6 +63,12 @@
         <!-- Foundation ZURB -->
         <!-- <script type="application/javascript" src="{{ asset('js/vendor/what-input.js') }}"></script> -->
         <!-- <script type="application/javascript" src="{{ asset('js/vendor/foundation.min.js') }}"></script> -->
+
+        <!-- TooltipJS -->
+        <script type="application/javascript" src="{{ asset('js/vendor/lightbox.js') }}"></script>
+
+        <!-- Font Awesome -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 
         <!-- JQuery Select2 -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>

@@ -4,6 +4,11 @@
 
 #filter {
     min-height: 350px;
+    font-size: 1.5em;
+}
+
+#filter .btn {
+    font-size: 1em;
 }
 
 #filter .select2-container--default .select2-selection--single {
@@ -75,4 +80,10 @@
 
 .shadow-bottom {
     box-shadow: 0 5px 5px -5px var(--color-blue);
+}
+
+.triangle-down {
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid var(--color-blue);
 }

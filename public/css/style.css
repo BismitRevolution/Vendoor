@@ -37,3 +37,7 @@
 body {
     font-family: "HKGrotesk-Regular";
 }
+
+#nav-search span {
+    margin-bottom: 25px;
+}

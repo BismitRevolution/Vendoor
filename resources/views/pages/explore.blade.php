@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="container row">
-    <div class="col-sm-12 col-md-4">
+    <div class="col-sm-12 col-md-3">
         <div id="filter" class="btn-group-vertical btn-block">
             <select id="filter-category" name="cat_key" onchange="this.form.submit()" class="btn-block jquery-select2">
                 @foreach ($categories as $category)
@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <div class="col-sm-12 col-md-8">
+    <div class="col-sm-12 col-md-9">
         <div class="flex-row">
             <div id="field" class="col-12">
                 @foreach ($vendors as $vendor)
@@ -45,18 +45,25 @@
                     <div class="col-sm-auto trailer">
                         @foreach ($vendor->media as $photo)
                             @if ($loop->first)
+                            <a class="" href="{{ url('storage/'.$photo->path) }}" data-lightbox="{{ $vendor->name }}" data-title="{{ $vendor->name }}">
                                 <div style="width: 85px; height: 85px; background: url('storage/{{ $photo->path }}') no-repeat center top; background-size: cover;"></div>
+                            </a>
                             @endif
                         @endforeach
 
                         <div class="flip row" style="max-width: 85px;">
                             @foreach ($vendor->media as $photo)
-                            <div class="col-4" style="margin-top: 10px; width: 25px; height: 25px; background: url('storage/{{ $photo->path }}') no-repeat center top; background-size: cover;"></div>
+                            <a class="col-4" href="{{ url('storage/'.$photo->path) }}" data-lightbox="{{ $vendor->name }}" data-title="{{ $vendor->name }}">
+                                <div style="margin: 0 auto; margin-top: 10px; width: 25px; height: 25px; background: url('storage/{{ $photo->path }}') no-repeat center top; background-size: cover;"></div>
+                            </a>
                             @endforeach
                         </div>
                     </div>
                     <div class="col">
-                        <div class="title blue bold">{{ $vendor->name }}</div>
+                        <div class="title d-flex">
+                            <div class="blue bold">{{ $vendor->name }}</div>
+                            <div class="ml-auto triangle-down"></div>
+                        </div>
                         <div class="paragraf">
                             <div class="tag">
                                 <p class="unflip">
