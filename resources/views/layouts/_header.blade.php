@@ -7,9 +7,9 @@
                     @if (!empty($vendors->current_key))
                     <input name="key" class="form-control white bg-transparent" type="text" value="{{ $vendors->current_key }}" style="border-color: white !important;"/>
                     @else
-                    <input name="key" class="form-control white bg-transparent" type="text" placeholder="search vendor" style="border-color: white !important;"/>
+                    <input name="key" class="form-control white bg-transparent" type="text" placeholder="cari vendor" style="border-color: white !important;"/>
                     @endif
-                    <span class="white">search</span>
+                    <span class="white">cari</span>
                 </label>
             <!-- </form> -->
         </div>
@@ -29,7 +29,7 @@
                     @else
                     <input name="key" class="form-control" type="text" placeholder="search vendor"/>
                     @endif
-                    <span>search</span>
+                    <span>cari</span>
                 </label>
             <!-- </form> -->
         </div>

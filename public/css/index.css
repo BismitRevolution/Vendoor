@@ -50,16 +50,16 @@ a:hover {
     text-decoration: none;
 }
 
-#middle {
+#middle, #bottom {
     padding: 35px 35px 10px 35px;
 }
 
-#middle .title h1 {
+#middle .title h1, #bottom .title h1 {
     font-family: "LuloCleanOne-Bold";
     font-size: 4em;
 }
 
-#middle .paragraf p {
+#middle .paragraf p, #bottom .paragraf p {
     font-family: "HKGrotesk-Regular";
     font-size: 1.2em;
 }
