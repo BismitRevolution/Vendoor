@@ -12,5 +12,7 @@ $(document).ready(function () {
 
         $("#filter").removeClass("btn-group-vertical").addClass("mobile-scale");
         $("#filter-fill").addClass("mobile-scale");
+
+        $(".mobile.post").addClass("mobile-scale");
     }
 });

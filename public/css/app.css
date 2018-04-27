@@ -207,3 +207,8 @@ img.mobile-scale {
 #filter-fill.mobile-scale {
     display: none;
 }
+
+.post.mobile-scale {
+    margin-left: 0px;
+    font-size: 1rem;
+}

@@ -41,8 +41,8 @@
         <div class="flex-row">
             <div id="field" class="col-12">
                 @foreach ($vendors as $vendor)
-                <div class="vendor-item flex-row d-flex post shadow-bottom">
-                    <div class="col-sm-auto trailer">
+                <div class="mobile vendor-item flex-row d-flex post shadow-bottom">
+                    <div class="col-xs-auto trailer">
                         @foreach ($vendor->media as $photo)
                             @if ($loop->first)
                             <a class="" href="{{ url('storage/'.$photo->path) }}" data-lightbox="{{ $vendor->name }}" data-title="{{ $vendor->name }}">
