@@ -163,3 +163,47 @@
 body {
     font-size: 1.3rem;
 }
+
+h1.mobile-scale {
+    font-size: 2.5rem !important;
+}
+
+p.mobile-scale {
+    font-size: 1rem !important;
+}
+
+a.mobile-scale {
+    font-size: 1.8rem !important;
+}
+
+img.mobile-scale {
+    width: 60px !important;
+}
+
+.mobile-container {
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+}
+
+.round.mobile-scale {
+    height: 10px !important;
+}
+
+.mobile-top.mobile-scale {
+    padding-bottom: 0px !important;
+}
+
+.mobile-bottom.mobile-scale {
+    padding-top: 0px !important;
+}
+
+#filter.mobile-scale {
+    min-height: 250px;
+    height: 250px !important;
+    font-size: 1.3rem !important;
+}
+
+#filter-fill.mobile-scale {
+    display: none;
+}

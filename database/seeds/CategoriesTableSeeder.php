@@ -12,22 +12,22 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         DB::table('categories')->insert([
-            'category_name' => 'equipment'
+            'category_name' => 'perlengkapan'
         ]);
         DB::table('categories')->insert([
-            'category_name' => 'catering'
+            'category_name' => 'katering'
         ]);
         DB::table('categories')->insert([
-            'category_name' => 'place'
+            'category_name' => 'tempat'
         ]);
         DB::table('categories')->insert([
-            'category_name' => 'printing'
+            'category_name' => 'percetakan'
         ]);
         DB::table('categories')->insert([
             'category_name' => 'merchandise'
         ]);
         DB::table('categories')->insert([
-            'category_name' => 'transportation'
+            'category_name' => 'transportasi'
         ]);
     }
 }

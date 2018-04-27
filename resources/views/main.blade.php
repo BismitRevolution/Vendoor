@@ -76,6 +76,7 @@
         <!-- Customization -->
         <script type="application/javascript" src="{{ asset('js/_header.js') }}"></script>
         <script type="application/javascript" src="{{ asset('js/_footer.js') }}"></script>
+        <script type="application/javascript" src="{{ asset('js/app.js') }}"></script>
         @yield('extra-js')
 
         @include('layouts._footer')

@@ -8,31 +8,31 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="mobile container">
     <div class="row">
         <a href="{{ route('search', ['cat_key' => '1']) }}" class="col box bg-blue">
             <div class="text-center">
-                <img src="{{ asset('img/equipment.png')}}" alt="" width="100px">
-                <p class="white">perlengkapan</p>
+                <img class="mobile-logo" src="{{ asset('img/equipment.png')}}" alt="" width="100px">
+                <p class="mobile-text white">perlengkapan</p>
             </div>
         </a>
         <a href="{{ route('search', ['cat_key' => '2']) }}" class="col box bg-blue-semi-light">
             <div class="text-center">
-                <img src="{{ asset('img/catering.png')}}" alt="" width="100px">
-                <p class="white">katering</p>
+                <img class="mobile-logo" src="{{ asset('img/catering.png')}}" alt="" width="100px">
+                <p class="mobile-text white">katering</p>
             </div>
         </a>
         <a href="{{ route('search', ['cat_key' => '3']) }}" class="col box bg-blue-light">
             <div class="text-center">
-                <img src="{{ asset('img/place.png')}}" alt="" width="100px">
-                <p class="white">tempat</p>
+                <img class="mobile-logo" src="{{ asset('img/place.png')}}" alt="" width="100px">
+                <p class="mobile-text white">tempat</p>
             </div>
         </a>
     </div>
 
     <div id="middle">
         <div class="title">
-            <h1 class="text-center white">Vendoor</h1>
+            <h1 class="mobile-text text-center white">Vendoor</h1>
         </div>
         <div class="paragraf">
             <p class="text-center white">your door to the best vendors</p>
@@ -42,20 +42,20 @@
     <div class="row">
         <a href="{{ route('search', ['cat_key' => '4']) }}" class="col box bg-blue-light">
             <div class="text-center">
-                <img src="{{ asset('img/printing.png')}}" alt="" width="100px">
-                <p class="white">percetakan</p>
+                <img class="mobile-logo" src="{{ asset('img/printing.png')}}" alt="" width="100px">
+                <p class="mobile-text white">percetakan</p>
             </div>
         </a>
         <a href="{{ route('search', ['cat_key' => '5']) }}" class="col box bg-blue-semi-light">
             <div class="text-center">
-                <img src="{{ asset('img/merchandise.png')}}" alt="" width="100px">
-                <p class="white">merchandise</p>
+                <img class="mobile-logo" src="{{ asset('img/merchandise.png')}}" alt="" width="100px">
+                <p class="mobile-text white">merchandise</p>
             </div>
         </a>
         <a href="{{ route('search', ['cat_key' => '6']) }}" class="col box bg-blue">
             <div class="text-center">
-                <img src="{{ asset('img/transportation.png')}}" alt="" width="100px">
-                <p class="white">transportasi</p>
+                <img class="mobile-logo" src="{{ asset('img/transportation.png')}}" alt="" width="100px">
+                <p class="mobile-text white">transportasi</p>
             </div>
         </a>
     </div>
@@ -63,11 +63,11 @@
     <div class="row" style="margin-top: 45px; margin-bottom: 35px;">
         <div class="col box br-white">
             <div class="row">
-                <div class="round bg-white col"></div>
-                <div class="round bg-white col"></div>
-                <div class="round bg-white col"></div>
-                <div class="round bg-white col"></div>
-                <div class="round bg-white col"></div>
+                <div class="mobile-round round bg-white col"></div>
+                <div class="mobile-round round bg-white col"></div>
+                <div class="mobile-round round bg-white col"></div>
+                <div class="mobile-round round bg-white col"></div>
+                <div class="mobile-round round bg-white col"></div>
             </div>
         </div>
     </div>

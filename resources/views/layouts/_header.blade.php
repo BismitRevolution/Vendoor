@@ -1,5 +1,5 @@
 @if(Request::is('/'))
-<div class="container d-flex flex-row align-items-center bg-transparent white">
+<div class="mobile container d-flex flex-row align-items-center bg-transparent white">
     <div id="nav-search" class="col blue">
         <div class="">
             <form role="form" action="{{ route('search') }}" method="GET">
@@ -16,11 +16,11 @@
     </div>
 </div>
 @else
-<div id="nav" class="container-fluid d-flex flex-row align-items-center blue bg-white">
-    <div id="nav-brand" class="col-sm-auto blue">
-        <a href="{{ route('index') }}" class="blue">VENDOOR</a>
+<div id="nav" class="mobile mobile-col-12 container d-flex flex-row align-items-center blue bg-white">
+    <div id="nav-brand" class="mobile-top col-sm-auto blue">
+        <a href="{{ route('index') }}" class="mobile-text blue">VENDOOR</a>
     </div>
-    <div id="nav-search" class="col blue">
+    <div id="nav-search" class="mobile-bottom col blue">
         <div class="">
             <form role="form" action="{{ route('search') }}" method="GET">
                 <label class="form-group has-float-label">
