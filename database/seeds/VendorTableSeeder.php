@@ -18,7 +18,7 @@ class VendorTableSeeder extends Seeder
             'email' => 'mtzequipment@gmail.com',
             'phone' => '0812xxxxx',
             'website' => 'www.mtzeq.com',
-            'location_id' => 2,
+            'location_id' => 1,
             'category_id' => 1
             // 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             // 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
@@ -31,8 +31,8 @@ class VendorTableSeeder extends Seeder
             'email' => 'mtzequipment@gmail.com',
             'phone' => '0812xxxxx',
             'website' => 'www.mtzeq.com',
-            'location_id' => 2,
-            'category_id' => 1
+            'location_id' => 1,
+            'category_id' => 2
             // 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             // 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -45,7 +45,45 @@ class VendorTableSeeder extends Seeder
             'phone' => '0812xxxxx',
             'website' => 'www.mtzeq.com',
             'location_id' => 2,
+            'category_id' => 3
+            // 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            // 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+        DB::table('vendors')->insert([
+            'name' => 'MTZ Equipment 4',
+            'description' => 'Berdiri sejak 1997, telah melayani 10.000 project, beroperasi di Jabodetabek',
+            'address' => 'Jalan raya margonda no. 525, Depok, Jawa Barat',
+            'email' => 'mtzequipment@gmail.com',
+            'phone' => '0812xxxxx',
+            'website' => 'www.mtzeq.com',
+            'location_id' => 2,
             'category_id' => 1
+            // 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            // 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('vendors')->insert([
+            'name' => 'MTZ Equipment 5',
+            'description' => 'Berdiri sejak 1997, telah melayani 10.000 project, beroperasi di Jabodetabek',
+            'address' => 'Jalan raya margonda no. 525, Depok, Jawa Barat',
+            'email' => 'mtzequipment@gmail.com',
+            'phone' => '0812xxxxx',
+            'website' => 'www.mtzeq.com',
+            'location_id' => 2,
+            'category_id' => 2
+            // 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            // 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+        DB::table('vendors')->insert([
+            'name' => 'MTZ Equipment 5',
+            'description' => 'Berdiri sejak 1997, telah melayani 10.000 project, beroperasi di Jabodetabek',
+            'address' => 'Jalan raya margonda no. 525, Depok, Jawa Barat',
+            'email' => 'mtzequipment@gmail.com',
+            'phone' => '0812xxxxx',
+            'website' => 'www.mtzeq.com',
+            'location_id' => 2,
+            'category_id' => 3
             // 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             // 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
