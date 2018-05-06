@@ -4,8 +4,8 @@
 }
 
 .form-template {
-	margin-t    font-family: "HKGrotesk-Regular";
-op: 20px;
+	margin-top: 20px;
+	font-family: "HKGrotesk-Regular";
 	padding-top: 20px;
 }
 
@@ -20,6 +20,7 @@ op: 20px;
 .btn-wrapped{
 	padding-right: 20px;
 }
+
 .btn-setting {
 	padding: 20px 10px;
 	margin: 10px 0px;
