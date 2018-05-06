@@ -70,13 +70,17 @@ class FilterController extends Controller
 
         if (null !== $request->input('cat_key')) {
             $cat_key = $request->input('cat_key');
-            $result = $result->where('vendors.category_id', '=', $cat_key);
+            if (strcmp($cat_key, "0") != 0) {
+                $result = $result->where('vendors.category_id', '=', $cat_key);
+            }
             // dd($cat_key);
         }
 
         if (null !== $request->input('loc_key')) {
             $loc_key = $request->input('loc_key');
-            $result = $result->where('vendors.location_id', '=', $loc_key);
+            if (strcmp($loc_key, "0") != 0) {
+                $result = $result->where('vendors.location_id', '=', $loc_key);
+            }
             // dd($loc_key);
         }
 

@@ -29,5 +29,11 @@ class CategoriesTableSeeder extends Seeder
         DB::table('categories')->insert([
             'category_name' => 'transportasi'
         ]);
+        DB::table('categories')->insert([
+            'category_name' => 'All',
+        ]);
+        DB::table('categories')
+            ->where('category_name', 'All')
+            ->update(['category_id' => 0]);
     }
 }

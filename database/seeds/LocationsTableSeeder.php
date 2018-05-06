@@ -32,5 +32,11 @@ class LocationsTableSeeder extends Seeder
         DB::table('locations')->insert([
             'location_name' => 'Semarang'
         ]);
+        DB::table('locations')->insert([
+            'location_name' => 'All',
+        ]);
+        DB::table('locations')
+            ->where('location_name', 'All')
+            ->update(['location_id' => 0]);
     }
 }
