@@ -29,9 +29,9 @@
                 @endforeach
             </select>
         </form>
-        <form class="btn-block" role="form" action="{{ route('search') }}" method="GET">
-            <input type="hidden" name="sorted" value="true"/>
-            <button type="submit" class="btn btn-secondary btn-block bg-blue">most viewed</button>
+        <!-- <form class="btn-block" role="form" action="{{ route('search') }}" method="GET"> -->
+            <!-- <input type="hidden" name="sorted" value="true"/> -->
+            <button type="submit" class="btn btn-secondary btn-block bg-blue" onclick="sortedFlag()">most viewed</button>
         </form>
             <button id="filter-fill" type="button" class="btn btn-secondary bg-blue" disabled style="height: 100%;"></button>
         </div>
@@ -95,4 +95,9 @@
 
 @section('extra-js')
 <script type="application/javascript" src="{{ asset('js/pages/explore.js') }}"></script>
+<script>
+    function sortedFlag() {
+        window.location.href = window.location.href + '&sorted=true';
+    }
+</script>
 @endsection
