@@ -77,7 +77,7 @@ class VendorController extends Controller
 
         for ($i=0; $i < 100; $i++) {
             $tag = new Tag;
-            $tag->name = $request->tagn;
+            $tag->tag_name = $request->tagn;
         }
 
         $counter = 1;
@@ -85,7 +85,7 @@ class VendorController extends Controller
 
         while (null !== $request->input($var)) {
             $tag = new Tag;
-            $tag->name = $request->input($var);
+            $tag->tag_name = $request->input($var);
             $tag->vendor_id = $vendor->vendor_id;
             $tag->save();
             $counter += 1;

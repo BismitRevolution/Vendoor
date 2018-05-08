@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-// use Carbon\Carbon;
+use Carbon\Carbon;
 
 class AdminTableSeeder extends Seeder
 {
@@ -13,11 +13,19 @@ class AdminTableSeeder extends Seeder
     public function run()
     {
         DB::table('admins')->insert([
-            'name' => 'admin',
+            'name' => 'Developer',
             'email' => 'admin@bismitrevolution.com',
-            'password' => bcrypt('admin')
-            // 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            // 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            'password' => bcrypt('admin'),
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+        ]);
+
+	DB::table('admins')->insert([
+            'name' => 'Admin',
+            'email' => 'admin@vendoor.co.id',
+            'password' => bcrypt('admin'),
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
     }
 }
