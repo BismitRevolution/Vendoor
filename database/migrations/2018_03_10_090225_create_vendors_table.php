@@ -20,7 +20,8 @@ class CreateVendorsTable extends Migration
             $table->text('address');
             $table->integer('location_id')->unsigned();
             $table->integer('category_id')->unsigned();
-            $table->text('email');
+            $table->text('email')->nullable();
+            $table->text('email_secondary')->nullable();
             $table->text('phone');
             $table->text('website');
             $table->integer('view_count')->unsigned()->default(0);

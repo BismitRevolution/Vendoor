@@ -39,8 +39,12 @@
 			<span>Phone</span>
 		</label>
 		<label class="form-group has-float-label form-setting">
-			<input id="email" name="email" for="email" class="form-control" type="email" placeholder="Vendor Email" required/>
-			<span>Email</span>
+			<input id="email" name="email" for="email" class="form-control" type="email" placeholder="Vendor Email"/>
+			<span>Email 1</span>
+		</label>
+		<label class="form-group has-float-label form-setting">
+			<input id="email-secondary" name="email_secondary" for="email-secondary" class="form-control" type="email" placeholder="Vendor Email"/>
+			<span>Email 2</span>
 		</label>
 
 		<div class="row">
@@ -94,6 +98,7 @@
 </form>
 </div>
 </div>
+@endsection
 
 @section('extra-js')
 	<script>
@@ -111,5 +116,4 @@
 			$("#form").submit();
 		}
 	</script>
-@endsection
 @endsection

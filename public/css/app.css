@@ -183,13 +183,14 @@ img.mobile-scale {
 }
 
 .mobile-container {
-    width: 95%;
     display: block;
     margin: 0 auto;
 }
 
 .round.mobile-scale {
     height: 10px !important;
+    width: 10px !important;
+    margin: 20px;
 }
 
 .mobile-top.mobile-scale {
@@ -201,8 +202,9 @@ img.mobile-scale {
 }
 
 #filter.mobile-scale {
-    min-height: 250px;
-    height: 250px !important;
+    min-height: 150px;
+    height: 150px !important;
+    margin-bottom: 25px;
     font-size: 1.3rem !important;
 }
 
@@ -213,4 +215,12 @@ img.mobile-scale {
 .post.mobile-scale {
     margin-left: 0px;
     font-size: 1rem;
+}
+
+.title .mobile-text {
+    font-size: 1.65em !important;
+}
+
+.paragraf .mobile-text {
+    font-size: 1rem !important;
 }

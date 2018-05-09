@@ -30,7 +30,8 @@
 				<th scope="col">Name</th>
 				<th scope="col">Description</th>
 				<th scope="col">Address</th>
-				<th scope="col">Email</th>
+				<th scope="col">Email 1</th>
+				<th scope="col">Email 2</th>
 				<th scope="col">Phone</th>
 				<th scope="col">Category</th>
 				<th scope="col">Location</th>
@@ -46,6 +47,7 @@
 				<td>{{ $vendor->description }}</td>
 				<td>{{ $vendor->address }}</td>
 				<td>{{ $vendor->email }}</td>
+				<td>{{ $vendor->email_secondary }}</td>
 				<td>{{ $vendor->phone }}</td>
 				<td>{{ $vendor->category_name }}</td>
 				<td>{{ $vendor->location_name }}</td>

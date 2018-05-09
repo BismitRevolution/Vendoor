@@ -23,9 +23,14 @@
             </label>
 
            <label class="form-group has-float-label form-setting">
-                <input disabled id="email" name="email" for="email" class="form-control" type="text" value="{{ $vendor->email }}"/>
-                <span>Email</span>
+                <input disabled id="email" name="email" for="email" class="form-control" type="email" value="{{ $vendor->email }}"/>
+                <span>Email 1</span>
             </label>
+
+			<label class="form-group has-float-label form-setting">
+                 <input disabled id="email-secondary" name="email_secondary" for="email-secondary" class="form-control" type="email" value="{{ $vendor->email }}"/>
+                 <span>Email 2</span>
+             </label>
 
             <label class="form-group has-float-label form-setting">
                 <input disabled id="phone" name="phone" for="phone" class="form-control" type="text" value="{{ $vendor->phone }}"/>

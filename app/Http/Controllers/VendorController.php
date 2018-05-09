@@ -58,7 +58,8 @@ class VendorController extends Controller
             'address'       => 'required',
             'location_id'   => 'required',
             'category_id'   => 'required',
-            'email'         => 'required|email|max:255',
+            'email'         => 'email|max:255',
+            'email_secondary' => 'email|max:255',
             'phone'         => 'required',
             'website'       => 'required'
         ]);
@@ -71,6 +72,7 @@ class VendorController extends Controller
         $vendor->location_id = $request->location_id;
         $vendor->category_id = $request->category_id;
         $vendor->email = $request->email;
+        $vendor->email_secondary = $request->email_secondary;
         $vendor->phone = $request->phone;
         $vendor->website = $request->website;
         $vendor->save();
@@ -144,7 +146,14 @@ class VendorController extends Controller
         $locations = DB::table('locations')->get();
         $categories = DB::table('categories')->get();
 
-        return view('vendors.edit')->with(['vendor' => $vendor, 'locations' => $locations, 'categories' => $categories]);
+        $tags = DB::table('tags')
+                            ->where('tags.vendor_id', '=', $vendor->vendor_id)
+                            ->get();
+
+        return view('vendors.edit')->with(['vendor' => $vendor,
+                                        'locations' => $locations,
+                                        'categories' => $categories,
+                                        'tags' => $tags]);
     }
 
     /**
@@ -162,11 +171,11 @@ class VendorController extends Controller
             'address'       => 'required',
             'location_id'   => 'required',
             'category_id'   => 'required',
-            'email'         => 'required|email|max:255',
+            'email'         => 'email|max:255',
+            'email_secondary' => 'email|max:255',
             'phone'         => 'required',
             'website'       => 'required'
         ));
-
 
         $vendor = Vendor::find($id);
 
@@ -176,10 +185,31 @@ class VendorController extends Controller
         $vendor->location_id = $request->input('location_id');
         $vendor->category_id = $request->input('category_id');
         $vendor->email = $request->input('email');
+        $vendor->email_secondary = $request->input('email_secondary');
         $vendor->phone = $request->input('phone');
         $vendor->website = $request->input('website');
 
         $vendor->save();
+
+        $tag = DB::table('tags')->where('vendor_id', $id);
+        $tag->delete();
+
+        for ($i=0; $i < 100; $i++) {
+            $tag = new Tag;
+            $tag->tag_name = $request->tagn;
+        }
+
+        $counter = 1;
+        $var = 'tags' . $counter;
+
+        while (null !== $request->input($var)) {
+            $tag = new Tag;
+            $tag->tag_name = $request->input($var);
+            $tag->vendor_id = $vendor->vendor_id;
+            $tag->save();
+            $counter += 1;
+            $var = 'tags' . $counter;
+        }
 
         return redirect()->route('admin.vendors.show', $vendor->vendor_id);
     }
