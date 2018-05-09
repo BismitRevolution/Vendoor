@@ -61,8 +61,8 @@
                     </div>
                     <div class="col">
                         <div class="title d-flex">
-                            <div class="blue bold">{{ $vendor->name }}</div>
-                            <div class="ml-auto triangle-down"></div>
+                            <div id="clickable" class="blue bold">{{ $vendor->name }}</div>
+                            <div id="clickable" class="ml-auto triangle-down"></div>
                         </div>
                         <div class="paragraf">
                             <div class="tag">
