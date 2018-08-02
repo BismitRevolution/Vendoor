@@ -78,6 +78,16 @@
         <script type="application/javascript" src="{{ asset('js/_header.js') }}"></script>
         <script type="application/javascript" src="{{ asset('js/_footer.js') }}"></script>
         <script type="application/javascript" src="{{ asset('js/app.js') }}"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122674215-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-122674215-1');
+        </script>
+
         @yield('extra-js')
 
         @include('layouts._footer')
